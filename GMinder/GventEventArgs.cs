@@ -28,8 +28,12 @@ namespace ReflectiveCode.GMinder
 {
     public class GventEventArgs : EventArgs
     {
+        #region Properties
+
         public Gvent Gvent { get; private set; }
         public GventChanges Changes { get; private set; }
+
+        #endregion
 
         public GventEventArgs(Gvent gvent, GventChanges changes)
         {
@@ -49,6 +53,8 @@ namespace ReflectiveCode.GMinder
         Status = 32,
         Color = 64,
         Added = 128,
-        Deleted = 256
+        Deleted = 256,
+        AddedReminder = 512,
+        DeletedReminder = 1024
     }
 }

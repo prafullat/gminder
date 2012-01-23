@@ -37,7 +37,7 @@ namespace ReflectiveCode.GMinder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Reminder());
+            Application.Run(new GReminder());
         }
     }
 }

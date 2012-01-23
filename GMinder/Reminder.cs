@@ -28,7 +28,7 @@ using System.Windows.Forms;
 
 namespace ReflectiveCode.GMinder
 {
-    public partial class Reminder : Form
+    public partial class GReminder : Form
     {
         const int ONE_MINUTE = 60 * 1000;
 
@@ -67,7 +67,7 @@ namespace ReflectiveCode.GMinder
             }
         }
 
-        public Reminder()
+        public GReminder()
         {
             InitializeComponent();
 
@@ -408,6 +408,26 @@ namespace ReflectiveCode.GMinder
         {
             using (var about = new About())
                 about.ShowDialog(this);
+        }
+
+        private void eventWhat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agenda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eventTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void GReminder_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

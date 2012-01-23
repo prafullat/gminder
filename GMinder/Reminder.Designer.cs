@@ -1,6 +1,6 @@
 namespace ReflectiveCode.GMinder
 {
-    partial class Reminder
+    partial class GReminder
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ReflectiveCode.GMinder
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reminder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GReminder));
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trayCalendarsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +39,7 @@ namespace ReflectiveCode.GMinder
             this.trayRefreshMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trayAddMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.trayAboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarRefresher = new System.ComponentModel.BackgroundWorker();
             this.eventWhere = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace ReflectiveCode.GMinder
             this.minuteTimer = new System.Windows.Forms.Timer(this.components);
             this.refreshTimer = new System.Windows.Forms.Timer(this.components);
             this.snoozeTimer = new System.Windows.Forms.Timer(this.components);
-            this.trayAboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trayMenu.SuspendLayout();
             this.eventTable.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -132,6 +132,13 @@ namespace ReflectiveCode.GMinder
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
             // 
+            // trayAboutMenuItem
+            // 
+            this.trayAboutMenuItem.Name = "trayAboutMenuItem";
+            this.trayAboutMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.trayAboutMenuItem.Text = "About GMinder";
+            this.trayAboutMenuItem.Click += new System.EventHandler(this.HandleTrayAbout);
+            // 
             // trayExitMenuItem
             // 
             this.trayExitMenuItem.Name = "trayExitMenuItem";
@@ -165,6 +172,7 @@ namespace ReflectiveCode.GMinder
             this.eventWhat.Size = new System.Drawing.Size(37, 18);
             this.eventWhat.TabIndex = 0;
             this.eventWhat.Text = "What";
+            this.eventWhat.Click += new System.EventHandler(this.eventWhat_Click);
             // 
             // eventWhen
             // 
@@ -197,6 +205,7 @@ namespace ReflectiveCode.GMinder
             this.eventTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.eventTable.Size = new System.Drawing.Size(459, 388);
             this.eventTable.TabIndex = 0;
+            this.eventTable.Paint += new System.Windows.Forms.PaintEventHandler(this.eventTable_Paint);
             // 
             // agenda
             // 
@@ -214,6 +223,7 @@ namespace ReflectiveCode.GMinder
             this.agenda.UseCompatibleStateImageBehavior = false;
             this.agenda.View = System.Windows.Forms.View.Details;
             this.agenda.SelectedChanged += new System.EventHandler(this.HandleAgendaSelectionChanged);
+            this.agenda.SelectedIndexChanged += new System.EventHandler(this.agenda_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -339,14 +349,7 @@ namespace ReflectiveCode.GMinder
             // 
             this.snoozeTimer.Tick += new System.EventHandler(this.HandleSnoozeTimerTick);
             // 
-            // trayAboutMenuItem
-            // 
-            this.trayAboutMenuItem.Name = "trayAboutMenuItem";
-            this.trayAboutMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.trayAboutMenuItem.Text = "About GMinder";
-            this.trayAboutMenuItem.Click += new System.EventHandler(this.HandleTrayAbout);
-            // 
-            // Reminder
+            // GReminder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -356,9 +359,10 @@ namespace ReflectiveCode.GMinder
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Reminder";
+            this.Name = "GReminder";
             this.Text = "GMinder";
             this.TopMost = global::ReflectiveCode.GMinder.Properties.Settings.Default.OnTop;
+            this.Load += new System.EventHandler(this.GReminder_Load);
             this.trayMenu.ResumeLayout(false);
             this.eventTable.ResumeLayout(false);
             this.eventTable.PerformLayout();

@@ -23,11 +23,14 @@
 /// OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 using Google.GData.Calendar;
+using Google.GData.Extensions;
 
 namespace ReflectiveCode.GMinder
 {
@@ -46,6 +49,8 @@ namespace ReflectiveCode.GMinder
                 else throw new InvalidOperationException("A Gvent's owning Calendar cannot be changed");
             }
         }
+
+        private List<GVentMinder> _Minders = new List<GVentMinder>();
 
         private string _Id;
         public string Id { get { return _Id; } }
@@ -88,6 +93,10 @@ namespace ReflectiveCode.GMinder
                 {
                     _Start = value;
                     NotifyChange(new GventEventArgs(this, GventChanges.Start));
+                    foreach (var minder in _Minders)
+                    {
+                        minder.Done = false;
+                    }
                 }
             }
         }
@@ -207,6 +216,26 @@ namespace ReflectiveCode.GMinder
             Update(entry);
         }
 
+        public void Add(GVentMinder minder)
+        {
+            if (_Minders.Contains(minder))
+                return;
+
+            minder.Gvent = this;
+            _Minders.Add(minder);
+            minder.Processed = true;
+            NotifyChange(new GventEventArgs(this, GventChanges.AddedReminder));
+        }
+
+        public void Remove(GVentMinder minder)
+        {
+            if (!_Minders.Contains(minder))
+                return;
+
+            _Minders.Remove(minder);
+            NotifyChange(new GventEventArgs(this, GventChanges.DeletedReminder));
+        }
+
         public bool Update(EventEntry entry)
         {
             if (entry.Id.AbsoluteUri != Id)
@@ -225,6 +254,33 @@ namespace ReflectiveCode.GMinder
             Stop = entry.Times[0].EndTime;
             Start = entry.Times[0].StartTime;
 
+            foreach (var gminder in _Minders)
+                gminder.Processed = false;
+
+            foreach (var reminder in entry.Reminders)
+            {
+                if (reminder.Method == Reminder.ReminderMethod.alert)
+                {
+                    bool matched = false;
+
+                    foreach (var minder in _Minders)
+                    {
+                        matched = minder.Update(reminder);
+                        if (matched)
+                            break;
+                    }
+
+                    if (!matched)
+                        Add(new GVentMinder(reminder));
+                }
+            }
+
+            foreach (var minder in _Minders.ToArray())
+            {
+                if (!minder.Processed)
+                    Remove(minder);
+            }
+
             Processed = true;
             return true;
         }
@@ -234,10 +290,30 @@ namespace ReflectiveCode.GMinder
             if (Status == GventStatus.Dismissed)
                 return;
 
-            if (soonTime < Start)
-                Status = GventStatus.Future;
-            else if (nowTime < Start)
-                Status = GventStatus.Soon;
+            if (nowTime < Start)
+            {
+                if (_Minders.Count == 0)
+                {
+                    if (soonTime < Start)
+                        Status = GventStatus.Future;
+                    else
+                        Status = GventStatus.Soon;
+                }
+                else
+                {
+                    bool isSoon = false;
+                    foreach (var minder in _Minders)
+                    {
+                        minder.Update(nowTime);
+                        isSoon = isSoon || minder.Done;
+                    }
+
+                    if (isSoon)
+                        Status = GventStatus.Soon;
+                    else
+                        Status = GventStatus.Future;
+                }
+            }
             else if (nowTime < Stop)
                 Status = GventStatus.Now;
             else
@@ -306,6 +382,16 @@ namespace ReflectiveCode.GMinder
                 _Stop = DateTime.FromBinary(Int64.Parse(reader["Stop"]));
                 _Url = reader["Url"];
                 _Status = (GventStatus)Int32.Parse(reader["Status"]);
+
+                if (reader.ReadToDescendant("Reminder"))
+                {
+                    while ((reader.MoveToContent() == XmlNodeType.Element) && (reader.LocalName == "Reminder"))
+                    {
+                        var minder = new GVentMinder();
+                        minder.ReadXml(reader);
+                        Add(minder);
+                    }
+                }
                 reader.Read();
             }
         }
@@ -319,6 +405,13 @@ namespace ReflectiveCode.GMinder
             writer.WriteAttributeString("Stop", _Stop.ToBinary().ToString());
             writer.WriteAttributeString("Url", _Url);
             writer.WriteAttributeString("Status", ((int)_Status).ToString());
+
+            foreach (var reminder in _Minders)
+            {
+                writer.WriteStartElement("Reminder");
+                reminder.WriteXml(writer);
+                writer.WriteEndElement();
+            }
         }
 
         #endregion

@@ -39,10 +39,15 @@ namespace ReflectiveCode.GMinder
         /// <param name="filename">filepath of the audio file to play</param>
         public static void MakeSound(string filename)
         {
-            if (!String.IsNullOrEmpty(filename))
+            try
+            {
+                new System.IO.FileInfo(filename);
                 Play(filename);
-            else
+            }
+            catch 
+            {
                 Beep();
+            }
         }
 
         /// <summary>

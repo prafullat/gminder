@@ -39,7 +39,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="SoundPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\WINDOWS\Media\Windows XP Print complete.wav</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="OnTop" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
