@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("GMinder")]
-[assembly: AssemblyDescription("Desktop reminder program for Google Calendar")]
+[assembly: AssemblyDescription("System tray reminders for Google Calendar")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ReflectiveCode.com")]
 [assembly: AssemblyProduct("GMinder")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("12a33fa1-3d10-4e95-aea1-b13a910a0bd8")]
+[assembly: Guid("630243ad-54ac-42ea-9a4d-d296011127df")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.2.10.0")]
-[assembly: AssemblyFileVersion("1.2.10.0")]
+[assembly: AssemblyVersion("1.3.1")]
+[assembly: AssemblyFileVersion("1.3.1")]
