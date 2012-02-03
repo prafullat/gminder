@@ -84,6 +84,18 @@ namespace ReflectiveCode.GMinder
             UpdateStatus();
             StartCalendarRefresher();
             ApplyRefreshTimerInterval();
+            var timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1;
+            timer.Tick += new EventHandler(Tray);
+            timer.Start();
+        }
+
+        void Tray(object sender, EventArgs e)
+        {
+            Hidden = true;
+            var timer = (System.Windows.Forms.Timer)sender;
+            timer.Stop();
+            timer.Dispose();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -202,6 +214,8 @@ namespace ReflectiveCode.GMinder
                 int y = Cursor.Position.Y - preview.Size.Height - 10;
                 if (y < 0)
                     y = Cursor.Position.Y;
+                if (x < 0)
+                    x = Cursor.Position.X; // Taskbar may be on left side
 
                 preview.SetDesktopLocation(x, y);
                 preview.Show();
