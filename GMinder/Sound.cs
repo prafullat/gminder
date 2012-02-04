@@ -24,6 +24,10 @@
 
 using System;
 using System.Media;
+using System.IO;
+using System.Speech;
+using System.Speech.Synthesis;
+using System.Text;
 
 namespace ReflectiveCode.GMinder
 {
@@ -32,6 +36,16 @@ namespace ReflectiveCode.GMinder
     /// </summary>
     public static class Sound
     {
+        private static SpeechSynthesizer voice;
+
+        static Sound()
+        {
+            voice = new SpeechSynthesizer();
+
+            voice.Volume = 100;
+            voice.Rate = 8 * voice.Rate / 3;
+        }
+
         /// <summary>
         /// Play an audio file if a path is specified
         /// or beep if no path is specified
@@ -39,15 +53,10 @@ namespace ReflectiveCode.GMinder
         /// <param name="filename">filepath of the audio file to play</param>
         public static void MakeSound(string filename)
         {
-            try
-            {
-                new System.IO.FileInfo(filename);
+            if (!String.IsNullOrEmpty(filename) && File.Exists(filename))
                 Play(filename);
-            }
-            catch 
-            {
+            else
                 Beep();
-            }
         }
 
         /// <summary>
@@ -93,6 +102,85 @@ namespace ReflectiveCode.GMinder
             {
                 Logging.LogException(false, e, "Error playing console beep in Sound.Beep()");
             }
+        }
+
+        public static void Speak(Gvent gvent)
+        {
+            StringBuilder spoken = new StringBuilder(gvent.Title);
+            DateTime Now = DateTime.Now;
+            TimeSpan timespan;
+
+            if (gvent.Start > Now)
+            {
+                timespan = gvent.Start - Now;
+                if (timespan.Days != 0 || timespan.Hours != 0 || timespan.Minutes != 0)
+                    spoken.Append(" starts in ");
+                else
+                    spoken.Append(" starts soon!");
+            }
+            else
+            {
+                timespan = DateTime.Now - gvent.Start;
+                if (timespan.Days != 0 || timespan.Hours != 0 || timespan.Minutes != 0)
+                    spoken.Append(" started ");
+                else
+                    spoken.Append(" starts now!");
+            }
+
+            if (timespan.Days > 0)
+            {
+                if (gvent.Start > Now)
+                    timespan = gvent.Start.Date - Now.Date;
+                else
+                    timespan = Now.Date - gvent.Start.Date;
+
+                spoken.Append(timespan.Days);
+                if (timespan.Days == 1)
+                    spoken.Append(" day");
+                else
+                    spoken.Append(" days");
+            }
+            else
+            {
+                if (timespan.Seconds > 30)
+                    timespan = new TimeSpan(0, timespan.Hours, timespan.Minutes + 1, 0);
+                if ((timespan.Minutes % 60 != 0) && (timespan.Hours >= 6))
+                    timespan = new TimeSpan(timespan.Days, timespan.Hours, timespan.Minutes + (90 - timespan.Minutes) % 60 - 30, 0);
+                if ((timespan.Minutes % 15 != 0) && (timespan.Hours > 0))
+                    timespan = new TimeSpan(timespan.Days, timespan.Hours, timespan.Minutes + (67 - timespan.Minutes) % 15 - 7, 0);
+                if ((timespan.Minutes % 5 != 0) && (timespan.Minutes > 10 || timespan.Hours > 0))
+                    timespan = new TimeSpan(timespan.Days, timespan.Hours, timespan.Minutes + (62 - timespan.Minutes) % 5 - 2, 0);
+
+                if (timespan.Days == 1)
+                {
+                    spoken.Append("1 day");
+                }
+                if (timespan.Hours > 0)
+                {
+                    spoken.Append(timespan.Hours);
+                    if (timespan.Hours == 1)
+                        spoken.Append(" hour");
+                    else
+                        spoken.Append(" hours");
+                }
+                if (timespan.Minutes > 0)
+                {
+                    if (timespan.Hours > 0)
+                        spoken.Append(", ");
+                    spoken.Append(timespan.Minutes);
+                    if (timespan.Minutes == 1)
+                        spoken.Append(" minute");
+                    else
+                        spoken.Append(" minutes");
+                }
+            }
+
+            if (gvent.Start > Now)
+                spoken.Append('!');
+            else
+                spoken.Append(" ago!");
+
+            voice.Speak(spoken.ToString());
         }
     }
 }

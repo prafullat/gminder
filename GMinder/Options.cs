@@ -25,14 +25,29 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ReflectiveCode.GMinder
 {
     public partial class Options : Form
     {
         public Options()
+        {            
+            InitializeComponent();         
+        }
+
+        private string GetDefaultSoundPath()
         {
-            InitializeComponent();
+            var win7_path = "C:\\Windows\\Media\\Windows Print Complete.wav";
+            var xp_path = "C:\\WINDOWS\\Media\\Windows XP Print complete.wav";
+
+            if (File.Exists(win7_path))
+                return win7_path;
+            if (File.Exists(xp_path))
+                return xp_path;
+
+            return "";
+
         }
 
         private void Options_FormClosed(object sender, FormClosedEventArgs e)
@@ -47,5 +62,14 @@ namespace ReflectiveCode.GMinder
         {
             Sound.MakeSound(soundBrowse.FileName);
         }
+
+        private void Options_Shown(object sender, EventArgs e)
+        {
+            if (this.soundPath.Text.Equals("First Run"))
+                Properties.Settings.Default.SoundPath = GetDefaultSoundPath();
+
+        }
+
+        
     }
 }

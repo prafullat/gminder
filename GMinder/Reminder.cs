@@ -120,7 +120,6 @@ namespace ReflectiveCode.GMinder
                 pass = null;
             }
         }
-
 	
         #region Status Update
 
@@ -140,6 +139,8 @@ namespace ReflectiveCode.GMinder
                         Hidden = false;
                     if (Properties.Settings.Default.SoonSound)
                         Sound.MakeSound(Properties.Settings.Default.SoundPath);
+                    if (Properties.Settings.Default.SoonVerbal)
+                        Sound.Speak(gvent);
                     return;
 
                 case GventStatus.Now:
@@ -147,6 +148,8 @@ namespace ReflectiveCode.GMinder
                         Hidden = false;
                     if (Properties.Settings.Default.NowSound)
                         Sound.MakeSound(Properties.Settings.Default.SoundPath);
+                    if (Properties.Settings.Default.NowVerbal)
+                        Sound.Speak(gvent);
                     return;
 
                 case GventStatus.Past:

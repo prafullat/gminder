@@ -17,6 +17,7 @@
 *.lib
 *.sbr
 *.sdf
+*.snk
 *.opensdf
 *.unsuccessfulbuild
 ipch/

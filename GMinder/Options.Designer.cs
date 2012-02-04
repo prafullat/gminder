@@ -38,6 +38,7 @@ namespace ReflectiveCode.GMinder
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.soonPopup = new System.Windows.Forms.CheckBox();
             this.soonSound = new System.Windows.Forms.CheckBox();
+            this.soonVerbal = new System.Windows.Forms.CheckBox();
             this.soonTime = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.futureColor = new ReflectiveCode.GMinder.Controls.ColorButton();
@@ -48,6 +49,7 @@ namespace ReflectiveCode.GMinder
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.nowPopup = new System.Windows.Forms.CheckBox();
             this.nowSound = new System.Windows.Forms.CheckBox();
+            this.nowVerbal = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.pastDismiss = new System.Windows.Forms.CheckBox();
             this.soonColor = new ReflectiveCode.GMinder.Controls.ColorButton();
@@ -168,6 +170,7 @@ namespace ReflectiveCode.GMinder
             this.flowLayoutPanel4.AutoSize = true;
             this.flowLayoutPanel4.Controls.Add(this.soonPopup);
             this.flowLayoutPanel4.Controls.Add(this.soonSound);
+            this.flowLayoutPanel4.Controls.Add(this.soonVerbal);
             this.flowLayoutPanel4.Controls.Add(this.soonTime);
             this.flowLayoutPanel4.Controls.Add(this.label2);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -204,11 +207,23 @@ namespace ReflectiveCode.GMinder
             this.soonSound.Text = "Sound";
             this.soonSound.UseVisualStyleBackColor = true;
             // 
+            // soonVerbal
+            // 
+            this.soonVerbal.AutoSize = true;
+            this.soonVerbal.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonVerbal;
+            this.soonVerbal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonVerbal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.soonVerbal.Location = new System.Drawing.Point(129, 3);
+            this.soonVerbal.Name = "soonVerbal";
+            this.soonVerbal.Size = new System.Drawing.Size(56, 17);
+            this.soonVerbal.TabIndex = 4;
+            this.soonVerbal.Text = "Verbal";
+            this.soonVerbal.UseVisualStyleBackColor = true;
+            // 
             // soonTime
             // 
             this.soonTime.AutoSize = true;
             this.soonTime.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.soonTime.Location = new System.Drawing.Point(129, 3);
+            this.soonTime.Location = new System.Drawing.Point(191, 3);
             this.soonTime.Maximum = new decimal(new int[] {
             1440,
             0,
@@ -223,7 +238,7 @@ namespace ReflectiveCode.GMinder
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 6);
+            this.label2.Location = new System.Drawing.Point(242, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -294,11 +309,13 @@ namespace ReflectiveCode.GMinder
             this.flowLayoutPanel5.AutoSize = true;
             this.flowLayoutPanel5.Controls.Add(this.nowPopup);
             this.flowLayoutPanel5.Controls.Add(this.nowSound);
+            this.flowLayoutPanel5.Controls.Add(this.nowVerbal);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(146, 66);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(312, 23);
             this.flowLayoutPanel5.TabIndex = 7;
+            this.flowLayoutPanel5.WrapContents = false;
             // 
             // nowPopup
             // 
@@ -328,6 +345,18 @@ namespace ReflectiveCode.GMinder
             this.nowSound.TabIndex = 1;
             this.nowSound.Text = "Sound";
             this.nowSound.UseVisualStyleBackColor = true;
+            // 
+            // nowVerbal
+            // 
+            this.nowVerbal.AutoSize = true;
+            this.nowVerbal.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowVerbal;
+            this.nowVerbal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowVerbal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nowVerbal.Location = new System.Drawing.Point(129, 3);
+            this.nowVerbal.Name = "nowVerbal";
+            this.nowVerbal.Size = new System.Drawing.Size(56, 17);
+            this.nowVerbal.TabIndex = 2;
+            this.nowVerbal.Text = "Verbal";
+            this.nowVerbal.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel8
             // 
@@ -428,14 +457,14 @@ namespace ReflectiveCode.GMinder
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.soundBrowse, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.soundPlay, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.soundPath, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.soundPlay, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.soundBrowse, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.soundPath, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(461, 29);
             this.tableLayoutPanel2.TabIndex = 0;
@@ -444,7 +473,7 @@ namespace ReflectiveCode.GMinder
             // 
             this.soundBrowse.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.soundBrowse.AutoSize = true;
-            this.soundBrowse.FileName = "C:\\WINDOWS\\Media\\Windows XP Print complete.wav";
+            this.soundBrowse.FileName = "First Run";
             this.soundBrowse.Location = new System.Drawing.Point(84, 3);
             this.soundBrowse.Name = "soundBrowse";
             this.soundBrowse.OpenFileDialog = this.openFileDialog1;
@@ -580,12 +609,12 @@ namespace ReflectiveCode.GMinder
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(473, 388);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
@@ -596,7 +625,7 @@ namespace ReflectiveCode.GMinder
             this.flowLayoutPanel7.Controls.Add(this.buttonOk);
             this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 356);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 347);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(467, 29);
             this.flowLayoutPanel7.TabIndex = 3;
@@ -625,6 +654,7 @@ namespace ReflectiveCode.GMinder
             this.Name = "Options";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Options";
+            this.Shown += new System.EventHandler(this.Options_Shown);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Options_FormClosed);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -694,5 +724,7 @@ namespace ReflectiveCode.GMinder
         private Controls.ColorButton pastColor;
         private System.Windows.Forms.CheckBox onTop;
         private System.Windows.Forms.CheckBox doPing;
+        private System.Windows.Forms.CheckBox soonVerbal;
+        private System.Windows.Forms.CheckBox nowVerbal;
     }
 }

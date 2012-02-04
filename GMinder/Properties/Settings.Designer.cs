@@ -169,7 +169,7 @@ namespace ReflectiveCode.GMinder.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("First Run")]
         public string SoundPath {
             get {
                 return ((string)(this["SoundPath"]));
@@ -200,6 +200,30 @@ namespace ReflectiveCode.GMinder.Properties {
             }
             set {
                 this["DoPing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SoonVerbal {
+            get {
+                return ((bool)(this["SoonVerbal"]));
+            }
+            set {
+                this["SoonVerbal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool NowVerbal {
+            get {
+                return ((bool)(this["NowVerbal"]));
+            }
+            set {
+                this["NowVerbal"] = value;
             }
         }
     }
