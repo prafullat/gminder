@@ -13,6 +13,9 @@ namespace ReflectiveCode.GMinder
         private Dictionary<DateTime, ListViewItem> _Headers = new Dictionary<DateTime, ListViewItem>();
         private Dictionary<Gvent, ListViewItem> _Gvents = new Dictionary<Gvent, ListViewItem>();
 
+        delegate void BeginUpdateCallback();
+        delegate void EndUpdateCallback();
+
         public Agenda()
         {
             _WhatColumn.Text = "What";
@@ -32,8 +35,8 @@ namespace ReflectiveCode.GMinder
             ForeColor = Color.Black;
 
             Schedule.Current.Redrawing += (sender, e) => Reset();
-            Schedule.Current.BeginningUpdate += (sender, e) => BeginUpdate();
-            Schedule.Current.EndingUpdate += (sender, e) => EndUpdate();
+            Schedule.Current.BeginningUpdate += (sender, e) => SafeBeginUpdate();
+            Schedule.Current.EndingUpdate += (sender, e) => SafeEndUpdate();
             Schedule.Current.GventAdded += (sender, e) => Add(e.Gvent);
             Schedule.Current.GventRemoved += (sender, e) => Remove(e.Gvent);
             Schedule.Current.GventChanged += (sender, e) => UpdateGvent(e.Gvent, e.Changes);
@@ -375,6 +378,37 @@ namespace ReflectiveCode.GMinder
                 else return null;
             }
         }
+
+
+        #region Threadsafe Agenda Access
+
+        public void SafeBeginUpdate()
+        {
+            if (this.InvokeRequired)
+            {
+                BeginUpdateCallback d = new BeginUpdateCallback(SafeBeginUpdate);
+                this.Invoke(d);
+            }
+            else
+            {
+                this.BeginUpdate();
+            }
+        }
+
+        public void SafeEndUpdate()
+        {
+            if (this.InvokeRequired)
+            {
+                EndUpdateCallback d = new EndUpdateCallback(SafeEndUpdate);
+                this.Invoke(d);
+            }
+            else
+            {
+                this.EndUpdate();
+            }
+        }
+
+        #endregion
 
 
         #region Events
