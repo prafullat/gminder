@@ -1,3 +1,5 @@
+using ReflectiveCode.GMinder.Controls;
+
 namespace ReflectiveCode.GMinder
 {
     partial class GReminder
@@ -46,7 +48,7 @@ namespace ReflectiveCode.GMinder
             this.eventWhat = new System.Windows.Forms.Label();
             this.eventWhen = new System.Windows.Forms.Label();
             this.eventTable = new System.Windows.Forms.TableLayoutPanel();
-            this.agenda = new ReflectiveCode.GMinder.Agenda();
+            this.agenda = new Agenda();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.integerSnooze = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
             this.buttonSnooze = new System.Windows.Forms.Button();

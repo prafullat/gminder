@@ -1,3 +1,5 @@
+using ReflectiveCode.GMinder.Controls;
+
 namespace ReflectiveCode.GMinder
 {
     partial class Preview
@@ -29,7 +31,7 @@ namespace ReflectiveCode.GMinder
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Preview));
-            this.agenda = new ReflectiveCode.GMinder.Agenda();
+            this.agenda = new Agenda();
             this.SuspendLayout();
             // 
             // agenda

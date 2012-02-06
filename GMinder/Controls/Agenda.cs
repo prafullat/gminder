@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ReflectiveCode.GMinder
+namespace ReflectiveCode.GMinder.Controls
 {
     public class Agenda : ListView
     {
