@@ -339,9 +339,8 @@ namespace ReflectiveCode.GMinder
             // 
             // minuteTimer
             // 
-            this.minuteTimer.Enabled = true;
-            this.minuteTimer.Interval = 1000;
             this.minuteTimer.Tick += new System.EventHandler(this.HandleMinuteTimerTick);
+            this.minuteTimer.Start();
             // 
             // refreshTimer
             // 

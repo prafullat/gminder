@@ -299,15 +299,14 @@ namespace ReflectiveCode.GMinder
         private void HandleMinuteTimerTick(object sender, EventArgs e)
         {
             DateTime thisMinute = DateTime.Now;
+
+            this.minuteTimer.Interval = ((60 - thisMinute.Second) * 1000 - thisMinute.Millisecond);
             thisMinute = new DateTime(thisMinute.Year, thisMinute.Month, thisMinute.Day, thisMinute.Hour, thisMinute.Minute, 0);
 
-            if (thisMinute != _PreviousMinute)
-            {
-                if (thisMinute.Date != _PreviousMinute.Date)
-                    Schedule.Current.Redraw();
-                _PreviousMinute = thisMinute;
-                UpdateStatus();
-            }
+            if (thisMinute.Date != _PreviousMinute.Date)
+                Schedule.Current.Redraw();
+            _PreviousMinute = thisMinute;
+            UpdateStatus();
         }
 
         #endregion
@@ -395,7 +394,6 @@ namespace ReflectiveCode.GMinder
 
         private void HandleSnoozeButton(object sender, EventArgs e)
         {
-            snoozeTimer.Stop();
             snoozeTimer.Interval = integerSnooze.Value * ONE_MINUTE;
             snoozeTimer.Start();
             Hidden = true;
