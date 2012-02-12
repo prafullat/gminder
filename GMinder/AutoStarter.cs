@@ -14,7 +14,7 @@ namespace ReflectiveCode.GMinder
         /// <summary>
         /// Set the autostart value for the assembly.
         /// </summary>
-        public static void SetAutoStart()
+        private static void SetAutoStart()
         {
             RegistryKey key = Registry.CurrentUser.CreateSubKey(RUN_LOCATION);
             key.SetValue(APP_NAME, Assembly.GetExecutingAssembly().Location);
@@ -36,12 +36,19 @@ namespace ReflectiveCode.GMinder
                     return false;
                 return (value == Assembly.GetExecutingAssembly().Location);
             }
+            set
+            {
+                if (value)
+                    SetAutoStart();
+                else
+                    UnSetAutoStart();
+            }
         }
 
         /// <summary>
         /// Unsets the autostart value for the assembly.
         /// </summary>
-        public static void UnSetAutoStart()
+        private static void UnSetAutoStart()
         {
             RegistryKey key = Registry.CurrentUser.CreateSubKey(RUN_LOCATION);
             key.DeleteValue(APP_NAME);

@@ -68,5 +68,12 @@ namespace ReflectiveCode.GMinder
             if (this.soundPathTextBox.Text.Equals("First Run"))
                 Properties.Settings.Default.SoundPath = GetDefaultSoundPath();
         }
+
+        private void startAtLogin_CheckedChanged(object sender, EventArgs e)
+        {
+            AutoStarter.IsAutoStartEnabled = this.startAtLoginCheckBox.Checked;
+
+            this.startAtLoginCheckBox.Checked = AutoStarter.IsAutoStartEnabled;
+        }
     }
 }

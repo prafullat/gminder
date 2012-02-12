@@ -109,6 +109,7 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="AutoStarter.cs" />
     <Compile Include="Controls\Agenda.cs">
       <SubType>Component</SubType>
     </Compile>

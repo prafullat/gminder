@@ -67,6 +67,7 @@ namespace ReflectiveCode.GMinder
             this.preloadDaysInteger = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
             this.doPingCheckBox = new System.Windows.Forms.CheckBox();
             this.onTopCheckBox = new System.Windows.Forms.CheckBox();
+            this.startAtLoginCheckBox = new System.Windows.Forms.CheckBox();
             this.optionsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.okCancelFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -91,7 +92,7 @@ namespace ReflectiveCode.GMinder
             this.refreshRateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.refreshRateLabel.AutoSize = true;
             this.agendaSettingsFlowLayoutPanel.SetFlowBreak(this.refreshRateLabel, true);
-            this.refreshRateLabel.Location = new System.Drawing.Point(70, 6);
+            this.refreshRateLabel.Location = new System.Drawing.Point(38, 6);
             this.refreshRateLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.refreshRateLabel.Name = "refreshRateLabel";
             this.refreshRateLabel.Size = new System.Drawing.Size(110, 13);
@@ -114,7 +115,7 @@ namespace ReflectiveCode.GMinder
             this.PreloadDaysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PreloadDaysLabel.AutoSize = true;
             this.agendaSettingsFlowLayoutPanel.SetFlowBreak(this.PreloadDaysLabel, true);
-            this.PreloadDaysLabel.Location = new System.Drawing.Point(70, 32);
+            this.PreloadDaysLabel.Location = new System.Drawing.Point(38, 32);
             this.PreloadDaysLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.PreloadDaysLabel.Name = "PreloadDaysLabel";
             this.PreloadDaysLabel.Size = new System.Drawing.Size(119, 13);
@@ -124,9 +125,10 @@ namespace ReflectiveCode.GMinder
             // eventsSettingsGroupBox
             // 
             this.eventsSettingsGroupBox.AutoSize = true;
+            this.eventsSettingsGroupBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.eventsSettingsGroupBox.Controls.Add(this.eventSettingsTableLayoutPanel);
             this.eventsSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.eventsSettingsGroupBox.Location = new System.Drawing.Point(3, 126);
+            this.eventsSettingsGroupBox.Location = new System.Drawing.Point(3, 149);
             this.eventsSettingsGroupBox.Name = "eventsSettingsGroupBox";
             this.eventsSettingsGroupBox.Size = new System.Drawing.Size(467, 160);
             this.eventsSettingsGroupBox.TabIndex = 1;
@@ -137,6 +139,7 @@ namespace ReflectiveCode.GMinder
             // 
             this.eventSettingsTableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.eventSettingsTableLayoutPanel.AutoSize = true;
             this.eventSettingsTableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.eventSettingsTableLayoutPanel.ColumnCount = 3;
             this.eventSettingsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -168,6 +171,7 @@ namespace ReflectiveCode.GMinder
             // SoonAlertOptionsFlowLayoutPanel
             // 
             this.SoonAlertOptionsFlowLayoutPanel.AutoSize = true;
+            this.SoonAlertOptionsFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonPopupCheckBox);
             this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonSoundCheckBox);
             this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonVerbalCheckBox);
@@ -307,6 +311,7 @@ namespace ReflectiveCode.GMinder
             // NowAlertOptionsFlowLayoutPanel
             // 
             this.NowAlertOptionsFlowLayoutPanel.AutoSize = true;
+            this.NowAlertOptionsFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.NowAlertOptionsFlowLayoutPanel.Controls.Add(this.nowPopupCheckBox);
             this.NowAlertOptionsFlowLayoutPanel.Controls.Add(this.nowSoundCheckBox);
             this.NowAlertOptionsFlowLayoutPanel.Controls.Add(this.nowVerbalCheckBox);
@@ -361,6 +366,7 @@ namespace ReflectiveCode.GMinder
             // pastDismissOptionFlowLayoutPanel
             // 
             this.pastDismissOptionFlowLayoutPanel.AutoSize = true;
+            this.pastDismissOptionFlowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pastDismissOptionFlowLayoutPanel.Controls.Add(this.pastDismissCheckBox);
             this.pastDismissOptionFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pastDismissOptionFlowLayoutPanel.Location = new System.Drawing.Point(146, 97);
@@ -443,7 +449,7 @@ namespace ReflectiveCode.GMinder
             this.soundSettingsGroupBox.AutoSize = true;
             this.soundSettingsGroupBox.Controls.Add(this.soundSettingsTableLayoutPanel);
             this.soundSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.soundSettingsGroupBox.Location = new System.Drawing.Point(3, 292);
+            this.soundSettingsGroupBox.Location = new System.Drawing.Point(3, 315);
             this.soundSettingsGroupBox.Name = "soundSettingsGroupBox";
             this.soundSettingsGroupBox.Size = new System.Drawing.Size(467, 48);
             this.soundSettingsGroupBox.TabIndex = 2;
@@ -518,7 +524,7 @@ namespace ReflectiveCode.GMinder
             this.agendaSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.agendaSettingsGroupBox.Location = new System.Drawing.Point(3, 3);
             this.agendaSettingsGroupBox.Name = "agendaSettingsGroupBox";
-            this.agendaSettingsGroupBox.Size = new System.Drawing.Size(467, 117);
+            this.agendaSettingsGroupBox.Size = new System.Drawing.Size(467, 140);
             this.agendaSettingsGroupBox.TabIndex = 0;
             this.agendaSettingsGroupBox.TabStop = false;
             this.agendaSettingsGroupBox.Text = "Agenda";
@@ -526,16 +532,17 @@ namespace ReflectiveCode.GMinder
             // agendaSettingsFlowLayoutPanel
             // 
             this.agendaSettingsFlowLayoutPanel.AutoSize = true;
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.startAtLoginCheckBox);
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.onTopCheckBox);
             this.agendaSettingsFlowLayoutPanel.Controls.Add(this.refreshRateInteger);
             this.agendaSettingsFlowLayoutPanel.Controls.Add(this.refreshRateLabel);
             this.agendaSettingsFlowLayoutPanel.Controls.Add(this.preloadDaysInteger);
             this.agendaSettingsFlowLayoutPanel.Controls.Add(this.PreloadDaysLabel);
             this.agendaSettingsFlowLayoutPanel.Controls.Add(this.doPingCheckBox);
-            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.onTopCheckBox);
             this.agendaSettingsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.agendaSettingsFlowLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.agendaSettingsFlowLayoutPanel.Name = "agendaSettingsFlowLayoutPanel";
-            this.agendaSettingsFlowLayoutPanel.Size = new System.Drawing.Size(461, 98);
+            this.agendaSettingsFlowLayoutPanel.Size = new System.Drawing.Size(461, 121);
             this.agendaSettingsFlowLayoutPanel.TabIndex = 0;
             // 
             // refreshRateInteger
@@ -550,7 +557,7 @@ namespace ReflectiveCode.GMinder
             0,
             0});
             this.refreshRateInteger.Name = "refreshRateInteger";
-            this.refreshRateInteger.Size = new System.Drawing.Size(67, 20);
+            this.refreshRateInteger.Size = new System.Drawing.Size(35, 20);
             this.refreshRateInteger.TabIndex = 0;
             this.refreshRateInteger.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.RefreshRate;
             // 
@@ -566,7 +573,7 @@ namespace ReflectiveCode.GMinder
             0,
             0});
             this.preloadDaysInteger.Name = "preloadDaysInteger";
-            this.preloadDaysInteger.Size = new System.Drawing.Size(67, 20);
+            this.preloadDaysInteger.Size = new System.Drawing.Size(35, 20);
             this.preloadDaysInteger.TabIndex = 2;
             this.preloadDaysInteger.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.LoadDays;
             // 
@@ -591,6 +598,7 @@ namespace ReflectiveCode.GMinder
             this.onTopCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.OnTop;
             this.onTopCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.onTopCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "OnTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.agendaSettingsFlowLayoutPanel.SetFlowBreak(this.onTopCheckBox, true);
             this.onTopCheckBox.Location = new System.Drawing.Point(3, 78);
             this.onTopCheckBox.Name = "onTopCheckBox";
             this.onTopCheckBox.Size = new System.Drawing.Size(92, 17);
@@ -598,8 +606,21 @@ namespace ReflectiveCode.GMinder
             this.onTopCheckBox.Text = "Always on top";
             this.onTopCheckBox.UseVisualStyleBackColor = true;
             // 
+            // startAtLoginCheckBox
+            // 
+            this.startAtLoginCheckBox.AutoSize = true;
+            this.agendaSettingsFlowLayoutPanel.SetFlowBreak(this.startAtLoginCheckBox, true);
+            this.startAtLoginCheckBox.Location = new System.Drawing.Point(3, 101);
+            this.startAtLoginCheckBox.Name = "startAtLoginCheckBox";
+            this.startAtLoginCheckBox.Size = new System.Drawing.Size(132, 17);
+            this.startAtLoginCheckBox.TabIndex = 6;
+            this.startAtLoginCheckBox.Text = "Start at Windows login";
+            this.startAtLoginCheckBox.UseVisualStyleBackColor = true;
+            this.startAtLoginCheckBox.CheckedChanged += new System.EventHandler(this.startAtLogin_CheckedChanged);
+            // 
             // optionsTableLayoutPanel
             // 
+            this.optionsTableLayoutPanel.AutoSize = true;
             this.optionsTableLayoutPanel.ColumnCount = 1;
             this.optionsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.optionsTableLayoutPanel.Controls.Add(this.agendaSettingsGroupBox, 0, 0);
@@ -615,7 +636,7 @@ namespace ReflectiveCode.GMinder
             this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.optionsTableLayoutPanel.Size = new System.Drawing.Size(473, 388);
+            this.optionsTableLayoutPanel.Size = new System.Drawing.Size(473, 408);
             this.optionsTableLayoutPanel.TabIndex = 0;
             // 
             // okCancelFlowLayoutPanel
@@ -625,9 +646,9 @@ namespace ReflectiveCode.GMinder
             this.okCancelFlowLayoutPanel.Controls.Add(this.buttonOk);
             this.okCancelFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.okCancelFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.okCancelFlowLayoutPanel.Location = new System.Drawing.Point(3, 348);
+            this.okCancelFlowLayoutPanel.Location = new System.Drawing.Point(3, 369);
             this.okCancelFlowLayoutPanel.Name = "okCancelFlowLayoutPanel";
-            this.okCancelFlowLayoutPanel.Size = new System.Drawing.Size(467, 29);
+            this.okCancelFlowLayoutPanel.Size = new System.Drawing.Size(467, 28);
             this.okCancelFlowLayoutPanel.TabIndex = 3;
             // 
             // buttonCancel
@@ -645,8 +666,10 @@ namespace ReflectiveCode.GMinder
             this.AcceptButton = this.buttonOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(473, 388);
+            this.ClientSize = new System.Drawing.Size(473, 408);
             this.Controls.Add(this.optionsTableLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -657,6 +680,7 @@ namespace ReflectiveCode.GMinder
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Options_FormClosed);
             this.Shown += new System.EventHandler(this.Options_Shown);
             this.eventsSettingsGroupBox.ResumeLayout(false);
+            this.eventsSettingsGroupBox.PerformLayout();
             this.eventSettingsTableLayoutPanel.ResumeLayout(false);
             this.eventSettingsTableLayoutPanel.PerformLayout();
             this.SoonAlertOptionsFlowLayoutPanel.ResumeLayout(false);
@@ -680,6 +704,7 @@ namespace ReflectiveCode.GMinder
             this.optionsTableLayoutPanel.PerformLayout();
             this.okCancelFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -726,5 +751,6 @@ namespace ReflectiveCode.GMinder
         private System.Windows.Forms.CheckBox doPingCheckBox;
         private System.Windows.Forms.CheckBox soonVerbalCheckBox;
         private System.Windows.Forms.CheckBox nowVerbalCheckBox;
+        private System.Windows.Forms.CheckBox startAtLoginCheckBox;
     }
 }
