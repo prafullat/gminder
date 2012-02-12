@@ -60,16 +60,13 @@ namespace ReflectiveCode.GMinder
 
         private void soundPlay_Click(object sender, EventArgs e)
         {
-            Sound.MakeSound(soundBrowse.FileName);
+            Sound.MakeSound(soundBrowseButton.FileName);
         }
 
         private void Options_Shown(object sender, EventArgs e)
         {
-            if (this.soundPath.Text.Equals("First Run"))
+            if (this.soundPathTextBox.Text.Equals("First Run"))
                 Properties.Settings.Default.SoundPath = GetDefaultSoundPath();
-
         }
-
-        
     }
 }

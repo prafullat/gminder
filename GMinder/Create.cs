@@ -62,7 +62,7 @@ namespace ReflectiveCode.GMinder
 
             var newEntry = new EventEntry();
             newEntry.QuickAdd = true;
-            newEntry.Content.Content = eventTextBox.Text;
+            newEntry.Content.Content = newEventNameTextBox.Text;
 
             try
             {

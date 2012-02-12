@@ -42,7 +42,7 @@ namespace ReflectiveCode.GMinder
         {
             InitializeComponent();
 
-            loginUsername.Text = Properties.Login.Default.Username;
+            loginUsernameLabel.Text = Properties.Login.Default.Username;
 
             columnHeader1.Width = calendarList.ClientSize.Width;
 
@@ -93,7 +93,7 @@ namespace ReflectiveCode.GMinder
             Account login = new Account();
             login.ShowDialog(this);
             login.Dispose();
-            loginUsername.Text = Properties.Login.Default.Username;
+            loginUsernameLabel.Text = Properties.Login.Default.Username;
         }
 
         #endregion
@@ -122,8 +122,8 @@ namespace ReflectiveCode.GMinder
 
         private void DownloadCalendars()
         {
-            calendarDownload.Text = "Downloading";
-            calendarDownload.Enabled = false;
+            calendarDownloadButton.Text = "Downloading";
+            calendarDownloadButton.Enabled = false;
 
             foreach (var newCal in Calendar.DownloadCalendars())
             {
@@ -151,8 +151,8 @@ namespace ReflectiveCode.GMinder
                 }
             }
 
-            calendarDownload.Text = "Download";
-            calendarDownload.Enabled = true;
+            calendarDownloadButton.Text = "Download";
+            calendarDownloadButton.Enabled = true;
         }
 
         private ListViewItem GetSelectedItem()
@@ -180,15 +180,15 @@ namespace ReflectiveCode.GMinder
         {
             if (calendar != null)
             {
-                calendarName.Text = calendarNames[calendar];
-                calendarUrl.Text = calendarUrls[calendar];
-                calendarColor.Color = calendarColors[calendar];
+                calendarNameTextBox.Text = calendarNames[calendar];
+                calendarUrlTextBox.Text = calendarUrls[calendar];
+                calendarColorBox.Color = calendarColors[calendar];
             }
             else
             {
-                calendarName.Text = string.Empty;
-                calendarUrl.Text = string.Empty;
-                calendarColor.Color = Color.Black;
+                calendarNameTextBox.Text = string.Empty;
+                calendarUrlTextBox.Text = string.Empty;
+                calendarColorBox.Color = Color.Black;
             }
         }
 
@@ -197,9 +197,9 @@ namespace ReflectiveCode.GMinder
             Calendar calendar = GetCalendarFromItem(item);
             if (calendar != null)
             {
-                calendarNames[calendar] = calendarName.Text;
-                calendarUrls[calendar] = calendarUrl.Text;
-                calendarColors[calendar] = calendarColor.Color;
+                calendarNames[calendar] = calendarNameTextBox.Text;
+                calendarUrls[calendar] = calendarUrlTextBox.Text;
+                calendarColors[calendar] = calendarColorBox.Color;
                 UpdateItemFromCalendar(item);
             }
         }
@@ -220,9 +220,9 @@ namespace ReflectiveCode.GMinder
             Calendar calendar = new Calendar();
 
             calendars.Add(calendar);
-            calendarNames.Add(calendar, calendarName.Text);
-            calendarUrls.Add(calendar, calendarUrl.Text);
-            calendarColors.Add(calendar, calendarColor.Color);
+            calendarNames.Add(calendar, calendarNameTextBox.Text);
+            calendarUrls.Add(calendar, calendarUrlTextBox.Text);
+            calendarColors.Add(calendar, calendarColorBox.Color);
             calendarActive.Add(calendar, true);
 
             AddItemFromCalendar(calendar);
@@ -291,13 +291,13 @@ namespace ReflectiveCode.GMinder
 
         private void calendarName_TextChanged(object sender, EventArgs e)
         {
-            if (calendarName.Focused)
+            if (calendarNameTextBox.Focused)
                 UpdateItemFromFields(GetSelectedItem());
         }
 
         private void calendarUrl_TextChanged(object sender, EventArgs e)
         {
-            if (calendarUrl.Focused)
+            if (calendarUrlTextBox.Focused)
                 UpdateItemFromFields(GetSelectedItem());
         }
 

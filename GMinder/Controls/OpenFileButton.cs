@@ -51,14 +51,14 @@ namespace ReflectiveCode.GMinder.Controls
             }
         }
 	
-        private TextBox textBox;
+        private TextBox fileNameTextBox;
         [Category("Behavior")]
         [Browsable(true)]
         [Description("Synchronize the selected filename with a textbox (optional)")]
         public TextBox TextBox
         {
-            get { return textBox; }
-            set { textBox = value; }
+            get { return fileNameTextBox; }
+            set { fileNameTextBox = value; }
         }
 
         private OpenFileDialog openFileDialog;

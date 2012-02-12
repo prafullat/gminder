@@ -29,74 +29,74 @@ namespace ReflectiveCode.GMinder
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Options));
-            this.label1 = new System.Windows.Forms.Label();
+            this.refreshRateLabel = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.soonPopup = new System.Windows.Forms.CheckBox();
-            this.soonSound = new System.Windows.Forms.CheckBox();
-            this.soonVerbal = new System.Windows.Forms.CheckBox();
-            this.soonTime = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.futureColor = new ReflectiveCode.GMinder.Controls.ColorButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nowPopup = new System.Windows.Forms.CheckBox();
-            this.nowSound = new System.Windows.Forms.CheckBox();
-            this.nowVerbal = new System.Windows.Forms.CheckBox();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pastDismiss = new System.Windows.Forms.CheckBox();
-            this.soonColor = new ReflectiveCode.GMinder.Controls.ColorButton();
-            this.nowColor = new ReflectiveCode.GMinder.Controls.ColorButton();
-            this.pastColor = new ReflectiveCode.GMinder.Controls.ColorButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.soundBrowse = new ReflectiveCode.GMinder.Controls.OpenFileButton();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.soundPath = new System.Windows.Forms.TextBox();
-            this.soundPlay = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.refreshRate = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
-            this.preload = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
-            this.doPing = new System.Windows.Forms.CheckBox();
-            this.onTop = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.PreloadDaysLabel = new System.Windows.Forms.Label();
+            this.soonColorDialog = new System.Windows.Forms.ColorDialog();
+            this.eventsSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.eventSettingsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.SoonAlertOptionsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.soonPopupCheckBox = new System.Windows.Forms.CheckBox();
+            this.soonSoundCheckBox = new System.Windows.Forms.CheckBox();
+            this.soonVerbalCheckBox = new System.Windows.Forms.CheckBox();
+            this.soonTimeInteger = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
+            this.soonMinutesLabel = new System.Windows.Forms.Label();
+            this.futureEventsColorButton = new ReflectiveCode.GMinder.Controls.ColorButton();
+            this.FutureEventsLabel = new System.Windows.Forms.Label();
+            this.SoonEventsLabel = new System.Windows.Forms.Label();
+            this.NowEventsLabel = new System.Windows.Forms.Label();
+            this.PastEventsLabel = new System.Windows.Forms.Label();
+            this.NowAlertOptionsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.nowPopupCheckBox = new System.Windows.Forms.CheckBox();
+            this.nowSoundCheckBox = new System.Windows.Forms.CheckBox();
+            this.nowVerbalCheckBox = new System.Windows.Forms.CheckBox();
+            this.pastDismissOptionFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.pastDismissCheckBox = new System.Windows.Forms.CheckBox();
+            this.SoonEventsColorButton = new ReflectiveCode.GMinder.Controls.ColorButton();
+            this.nowEventsColorButton = new ReflectiveCode.GMinder.Controls.ColorButton();
+            this.pastEventsColorButton = new ReflectiveCode.GMinder.Controls.ColorButton();
+            this.soundSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.soundSettingsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.soundPlayButton = new System.Windows.Forms.Button();
+            this.soundBrowseButton = new ReflectiveCode.GMinder.Controls.OpenFileButton();
+            this.openSoundFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.soundPathTextBox = new System.Windows.Forms.TextBox();
+            this.agendaSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.agendaSettingsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.refreshRateInteger = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
+            this.preloadDaysInteger = new ReflectiveCode.GMinder.Controls.IntegerUpDown();
+            this.doPingCheckBox = new System.Windows.Forms.CheckBox();
+            this.onTopCheckBox = new System.Windows.Forms.CheckBox();
+            this.optionsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.okCancelFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.soonTime)).BeginInit();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel8.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.refreshRate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preload)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
+            this.eventsSettingsGroupBox.SuspendLayout();
+            this.eventSettingsTableLayoutPanel.SuspendLayout();
+            this.SoonAlertOptionsFlowLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.soonTimeInteger)).BeginInit();
+            this.NowAlertOptionsFlowLayoutPanel.SuspendLayout();
+            this.pastDismissOptionFlowLayoutPanel.SuspendLayout();
+            this.soundSettingsGroupBox.SuspendLayout();
+            this.soundSettingsTableLayoutPanel.SuspendLayout();
+            this.agendaSettingsGroupBox.SuspendLayout();
+            this.agendaSettingsFlowLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshRateInteger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preloadDaysInteger)).BeginInit();
+            this.optionsTableLayoutPanel.SuspendLayout();
+            this.okCancelFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // refreshRateLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.flowLayoutPanel3.SetFlowBreak(this.label1, true);
-            this.label1.Location = new System.Drawing.Point(70, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Refresh rate (minutes)";
+            this.refreshRateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.refreshRateLabel.AutoSize = true;
+            this.agendaSettingsFlowLayoutPanel.SetFlowBreak(this.refreshRateLabel, true);
+            this.refreshRateLabel.Location = new System.Drawing.Point(70, 6);
+            this.refreshRateLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.refreshRateLabel.Name = "refreshRateLabel";
+            this.refreshRateLabel.Size = new System.Drawing.Size(110, 13);
+            this.refreshRateLabel.TabIndex = 1;
+            this.refreshRateLabel.Text = "Refresh rate (minutes)";
             // 
             // buttonOk
             // 
@@ -109,526 +109,526 @@ namespace ReflectiveCode.GMinder
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // PreloadDaysLabel
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.flowLayoutPanel3.SetFlowBreak(this.label3, true);
-            this.label3.Location = new System.Drawing.Point(70, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Preload how many days";
+            this.PreloadDaysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.PreloadDaysLabel.AutoSize = true;
+            this.agendaSettingsFlowLayoutPanel.SetFlowBreak(this.PreloadDaysLabel, true);
+            this.PreloadDaysLabel.Location = new System.Drawing.Point(70, 32);
+            this.PreloadDaysLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.PreloadDaysLabel.Name = "PreloadDaysLabel";
+            this.PreloadDaysLabel.Size = new System.Drawing.Size(119, 13);
+            this.PreloadDaysLabel.TabIndex = 3;
+            this.PreloadDaysLabel.Text = "Preload how many days";
             // 
-            // groupBox2
+            // eventsSettingsGroupBox
             // 
-            this.groupBox2.AutoSize = true;
-            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(3, 126);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(467, 160);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Events";
+            this.eventsSettingsGroupBox.AutoSize = true;
+            this.eventsSettingsGroupBox.Controls.Add(this.eventSettingsTableLayoutPanel);
+            this.eventsSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.eventsSettingsGroupBox.Location = new System.Drawing.Point(3, 126);
+            this.eventsSettingsGroupBox.Name = "eventsSettingsGroupBox";
+            this.eventsSettingsGroupBox.Size = new System.Drawing.Size(467, 160);
+            this.eventsSettingsGroupBox.TabIndex = 1;
+            this.eventsSettingsGroupBox.TabStop = false;
+            this.eventsSettingsGroupBox.Text = "Events";
             // 
-            // tableLayoutPanel1
+            // eventSettingsTableLayoutPanel
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel4, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.futureColor, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel5, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel8, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.soonColor, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.nowColor, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pastColor, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 125);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.eventSettingsTableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.eventSettingsTableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.eventSettingsTableLayoutPanel.ColumnCount = 3;
+            this.eventSettingsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.eventSettingsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.eventSettingsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.SoonAlertOptionsFlowLayoutPanel, 2, 1);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.futureEventsColorButton, 1, 0);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.FutureEventsLabel, 0, 0);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.SoonEventsLabel, 0, 1);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.NowEventsLabel, 0, 2);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.PastEventsLabel, 0, 3);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.NowAlertOptionsFlowLayoutPanel, 2, 2);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.pastDismissOptionFlowLayoutPanel, 2, 3);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.SoonEventsColorButton, 1, 1);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.nowEventsColorButton, 1, 2);
+            this.eventSettingsTableLayoutPanel.Controls.Add(this.pastEventsColorButton, 1, 3);
+            this.eventSettingsTableLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.eventSettingsTableLayoutPanel.Name = "eventSettingsTableLayoutPanel";
+            this.eventSettingsTableLayoutPanel.RowCount = 4;
+            this.eventSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.eventSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.eventSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.eventSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.eventSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.eventSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.eventSettingsTableLayoutPanel.Size = new System.Drawing.Size(461, 125);
+            this.eventSettingsTableLayoutPanel.TabIndex = 0;
             // 
-            // flowLayoutPanel4
+            // SoonAlertOptionsFlowLayoutPanel
             // 
-            this.flowLayoutPanel4.AutoSize = true;
-            this.flowLayoutPanel4.Controls.Add(this.soonPopup);
-            this.flowLayoutPanel4.Controls.Add(this.soonSound);
-            this.flowLayoutPanel4.Controls.Add(this.soonVerbal);
-            this.flowLayoutPanel4.Controls.Add(this.soonTime);
-            this.flowLayoutPanel4.Controls.Add(this.label2);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(146, 34);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(312, 26);
-            this.flowLayoutPanel4.TabIndex = 4;
+            this.SoonAlertOptionsFlowLayoutPanel.AutoSize = true;
+            this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonPopupCheckBox);
+            this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonSoundCheckBox);
+            this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonVerbalCheckBox);
+            this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonTimeInteger);
+            this.SoonAlertOptionsFlowLayoutPanel.Controls.Add(this.soonMinutesLabel);
+            this.SoonAlertOptionsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SoonAlertOptionsFlowLayoutPanel.Location = new System.Drawing.Point(146, 34);
+            this.SoonAlertOptionsFlowLayoutPanel.Name = "SoonAlertOptionsFlowLayoutPanel";
+            this.SoonAlertOptionsFlowLayoutPanel.Size = new System.Drawing.Size(312, 26);
+            this.SoonAlertOptionsFlowLayoutPanel.TabIndex = 4;
             // 
-            // soonPopup
+            // soonPopupCheckBox
             // 
-            this.soonPopup.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.soonPopup.AutoSize = true;
-            this.soonPopup.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonPopup;
-            this.soonPopup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.soonPopup.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonPopup", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.soonPopup.Location = new System.Drawing.Point(3, 4);
-            this.soonPopup.Name = "soonPopup";
-            this.soonPopup.Size = new System.Drawing.Size(57, 17);
-            this.soonPopup.TabIndex = 0;
-            this.soonPopup.Text = "Popup";
-            this.soonPopup.UseVisualStyleBackColor = true;
+            this.soonPopupCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.soonPopupCheckBox.AutoSize = true;
+            this.soonPopupCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonPopup;
+            this.soonPopupCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.soonPopupCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonPopup", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.soonPopupCheckBox.Location = new System.Drawing.Point(3, 4);
+            this.soonPopupCheckBox.Name = "soonPopupCheckBox";
+            this.soonPopupCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.soonPopupCheckBox.TabIndex = 0;
+            this.soonPopupCheckBox.Text = "Popup";
+            this.soonPopupCheckBox.UseVisualStyleBackColor = true;
             // 
-            // soonSound
+            // soonSoundCheckBox
             // 
-            this.soonSound.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.soonSound.AutoSize = true;
-            this.soonSound.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonSound;
-            this.soonSound.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.soonSound.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonSound", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.soonSound.Location = new System.Drawing.Point(66, 4);
-            this.soonSound.Name = "soonSound";
-            this.soonSound.Size = new System.Drawing.Size(57, 17);
-            this.soonSound.TabIndex = 1;
-            this.soonSound.Text = "Sound";
-            this.soonSound.UseVisualStyleBackColor = true;
+            this.soonSoundCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.soonSoundCheckBox.AutoSize = true;
+            this.soonSoundCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonSound;
+            this.soonSoundCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.soonSoundCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonSound", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.soonSoundCheckBox.Location = new System.Drawing.Point(66, 4);
+            this.soonSoundCheckBox.Name = "soonSoundCheckBox";
+            this.soonSoundCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.soonSoundCheckBox.TabIndex = 1;
+            this.soonSoundCheckBox.Text = "Sound";
+            this.soonSoundCheckBox.UseVisualStyleBackColor = true;
             // 
-            // soonVerbal
+            // soonVerbalCheckBox
             // 
-            this.soonVerbal.AutoSize = true;
-            this.soonVerbal.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonVerbal;
-            this.soonVerbal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonVerbal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.soonVerbal.Location = new System.Drawing.Point(129, 3);
-            this.soonVerbal.Name = "soonVerbal";
-            this.soonVerbal.Size = new System.Drawing.Size(56, 17);
-            this.soonVerbal.TabIndex = 4;
-            this.soonVerbal.Text = "Verbal";
-            this.soonVerbal.UseVisualStyleBackColor = true;
+            this.soonVerbalCheckBox.AutoSize = true;
+            this.soonVerbalCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonVerbal;
+            this.soonVerbalCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonVerbal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.soonVerbalCheckBox.Location = new System.Drawing.Point(129, 3);
+            this.soonVerbalCheckBox.Name = "soonVerbalCheckBox";
+            this.soonVerbalCheckBox.Size = new System.Drawing.Size(56, 17);
+            this.soonVerbalCheckBox.TabIndex = 4;
+            this.soonVerbalCheckBox.Text = "Verbal";
+            this.soonVerbalCheckBox.UseVisualStyleBackColor = true;
             // 
-            // soonTime
+            // soonTimeInteger
             // 
-            this.soonTime.AutoSize = true;
-            this.soonTime.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.soonTime.Location = new System.Drawing.Point(191, 3);
-            this.soonTime.Maximum = new decimal(new int[] {
+            this.soonTimeInteger.AutoSize = true;
+            this.soonTimeInteger.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.soonTimeInteger.Location = new System.Drawing.Point(191, 3);
+            this.soonTimeInteger.Maximum = new decimal(new int[] {
             1440,
             0,
             0,
             0});
-            this.soonTime.Name = "soonTime";
-            this.soonTime.Size = new System.Drawing.Size(47, 20);
-            this.soonTime.TabIndex = 2;
-            this.soonTime.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonTime;
+            this.soonTimeInteger.Name = "soonTimeInteger";
+            this.soonTimeInteger.Size = new System.Drawing.Size(47, 20);
+            this.soonTimeInteger.TabIndex = 2;
+            this.soonTimeInteger.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonTime;
             // 
-            // label2
+            // soonMinutesLabel
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "minutes";
+            this.soonMinutesLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.soonMinutesLabel.AutoSize = true;
+            this.soonMinutesLabel.Location = new System.Drawing.Point(242, 6);
+            this.soonMinutesLabel.Margin = new System.Windows.Forms.Padding(1, 0, 3, 0);
+            this.soonMinutesLabel.Name = "soonMinutesLabel";
+            this.soonMinutesLabel.Size = new System.Drawing.Size(43, 13);
+            this.soonMinutesLabel.TabIndex = 3;
+            this.soonMinutesLabel.Text = "minutes";
             // 
-            // futureColor
+            // futureEventsColorButton
             // 
-            this.futureColor.AutoSize = true;
-            this.futureColor.BackColor = System.Drawing.Color.White;
-            this.futureColor.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.FutureColor;
-            this.futureColor.ColorDialog = this.colorDialog1;
-            this.futureColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.futureColor.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "FutureColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.futureColor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.futureColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.futureColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.futureColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.futureColor.Location = new System.Drawing.Point(46, 3);
-            this.futureColor.Name = "futureColor";
-            this.futureColor.Size = new System.Drawing.Size(94, 25);
-            this.futureColor.TabIndex = 1;
-            this.futureColor.Text = "Color";
-            this.futureColor.UseVisualStyleBackColor = false;
+            this.futureEventsColorButton.AutoSize = true;
+            this.futureEventsColorButton.BackColor = System.Drawing.Color.White;
+            this.futureEventsColorButton.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.FutureColor;
+            this.futureEventsColorButton.ColorDialog = this.soonColorDialog;
+            this.futureEventsColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.futureEventsColorButton.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "FutureColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.futureEventsColorButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.futureEventsColorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.futureEventsColorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.futureEventsColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.futureEventsColorButton.Location = new System.Drawing.Point(46, 3);
+            this.futureEventsColorButton.Name = "futureEventsColorButton";
+            this.futureEventsColorButton.Size = new System.Drawing.Size(94, 25);
+            this.futureEventsColorButton.TabIndex = 1;
+            this.futureEventsColorButton.Text = "Color";
+            this.futureEventsColorButton.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // FutureEventsLabel
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Future";
+            this.FutureEventsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.FutureEventsLabel.AutoSize = true;
+            this.FutureEventsLabel.Location = new System.Drawing.Point(3, 9);
+            this.FutureEventsLabel.Name = "FutureEventsLabel";
+            this.FutureEventsLabel.Size = new System.Drawing.Size(37, 13);
+            this.FutureEventsLabel.TabIndex = 0;
+            this.FutureEventsLabel.Text = "Future";
             // 
-            // label5
+            // SoonEventsLabel
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Soon";
+            this.SoonEventsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SoonEventsLabel.AutoSize = true;
+            this.SoonEventsLabel.Location = new System.Drawing.Point(3, 40);
+            this.SoonEventsLabel.Name = "SoonEventsLabel";
+            this.SoonEventsLabel.Size = new System.Drawing.Size(32, 13);
+            this.SoonEventsLabel.TabIndex = 2;
+            this.SoonEventsLabel.Text = "Soon";
             // 
-            // label6
+            // NowEventsLabel
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Now";
+            this.NowEventsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NowEventsLabel.AutoSize = true;
+            this.NowEventsLabel.Location = new System.Drawing.Point(3, 72);
+            this.NowEventsLabel.Name = "NowEventsLabel";
+            this.NowEventsLabel.Size = new System.Drawing.Size(29, 13);
+            this.NowEventsLabel.TabIndex = 5;
+            this.NowEventsLabel.Text = "Now";
             // 
-            // label7
+            // PastEventsLabel
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 103);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Past";
+            this.PastEventsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.PastEventsLabel.AutoSize = true;
+            this.PastEventsLabel.Location = new System.Drawing.Point(3, 103);
+            this.PastEventsLabel.Name = "PastEventsLabel";
+            this.PastEventsLabel.Size = new System.Drawing.Size(28, 13);
+            this.PastEventsLabel.TabIndex = 8;
+            this.PastEventsLabel.Text = "Past";
             // 
-            // flowLayoutPanel5
+            // NowAlertOptionsFlowLayoutPanel
             // 
-            this.flowLayoutPanel5.AutoSize = true;
-            this.flowLayoutPanel5.Controls.Add(this.nowPopup);
-            this.flowLayoutPanel5.Controls.Add(this.nowSound);
-            this.flowLayoutPanel5.Controls.Add(this.nowVerbal);
-            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(146, 66);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(312, 23);
-            this.flowLayoutPanel5.TabIndex = 7;
-            this.flowLayoutPanel5.WrapContents = false;
+            this.NowAlertOptionsFlowLayoutPanel.AutoSize = true;
+            this.NowAlertOptionsFlowLayoutPanel.Controls.Add(this.nowPopupCheckBox);
+            this.NowAlertOptionsFlowLayoutPanel.Controls.Add(this.nowSoundCheckBox);
+            this.NowAlertOptionsFlowLayoutPanel.Controls.Add(this.nowVerbalCheckBox);
+            this.NowAlertOptionsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NowAlertOptionsFlowLayoutPanel.Location = new System.Drawing.Point(146, 66);
+            this.NowAlertOptionsFlowLayoutPanel.Name = "NowAlertOptionsFlowLayoutPanel";
+            this.NowAlertOptionsFlowLayoutPanel.Size = new System.Drawing.Size(312, 23);
+            this.NowAlertOptionsFlowLayoutPanel.TabIndex = 7;
+            this.NowAlertOptionsFlowLayoutPanel.WrapContents = false;
             // 
-            // nowPopup
+            // nowPopupCheckBox
             // 
-            this.nowPopup.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.nowPopup.AutoSize = true;
-            this.nowPopup.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowPopup;
-            this.nowPopup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.nowPopup.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowPopup", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nowPopup.Location = new System.Drawing.Point(3, 3);
-            this.nowPopup.Name = "nowPopup";
-            this.nowPopup.Size = new System.Drawing.Size(57, 17);
-            this.nowPopup.TabIndex = 0;
-            this.nowPopup.Text = "Popup";
-            this.nowPopup.UseVisualStyleBackColor = true;
+            this.nowPopupCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.nowPopupCheckBox.AutoSize = true;
+            this.nowPopupCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowPopup;
+            this.nowPopupCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.nowPopupCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowPopup", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nowPopupCheckBox.Location = new System.Drawing.Point(3, 3);
+            this.nowPopupCheckBox.Name = "nowPopupCheckBox";
+            this.nowPopupCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.nowPopupCheckBox.TabIndex = 0;
+            this.nowPopupCheckBox.Text = "Popup";
+            this.nowPopupCheckBox.UseVisualStyleBackColor = true;
             // 
-            // nowSound
+            // nowSoundCheckBox
             // 
-            this.nowSound.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.nowSound.AutoSize = true;
-            this.nowSound.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowSound;
-            this.nowSound.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.nowSound.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowSound", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.flowLayoutPanel5.SetFlowBreak(this.nowSound, true);
-            this.nowSound.Location = new System.Drawing.Point(66, 3);
-            this.nowSound.Name = "nowSound";
-            this.nowSound.Size = new System.Drawing.Size(57, 17);
-            this.nowSound.TabIndex = 1;
-            this.nowSound.Text = "Sound";
-            this.nowSound.UseVisualStyleBackColor = true;
+            this.nowSoundCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.nowSoundCheckBox.AutoSize = true;
+            this.nowSoundCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowSound;
+            this.nowSoundCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.nowSoundCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowSound", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NowAlertOptionsFlowLayoutPanel.SetFlowBreak(this.nowSoundCheckBox, true);
+            this.nowSoundCheckBox.Location = new System.Drawing.Point(66, 3);
+            this.nowSoundCheckBox.Name = "nowSoundCheckBox";
+            this.nowSoundCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.nowSoundCheckBox.TabIndex = 1;
+            this.nowSoundCheckBox.Text = "Sound";
+            this.nowSoundCheckBox.UseVisualStyleBackColor = true;
             // 
-            // nowVerbal
+            // nowVerbalCheckBox
             // 
-            this.nowVerbal.AutoSize = true;
-            this.nowVerbal.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowVerbal;
-            this.nowVerbal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowVerbal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nowVerbal.Location = new System.Drawing.Point(129, 3);
-            this.nowVerbal.Name = "nowVerbal";
-            this.nowVerbal.Size = new System.Drawing.Size(56, 17);
-            this.nowVerbal.TabIndex = 2;
-            this.nowVerbal.Text = "Verbal";
-            this.nowVerbal.UseVisualStyleBackColor = true;
+            this.nowVerbalCheckBox.AutoSize = true;
+            this.nowVerbalCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowVerbal;
+            this.nowVerbalCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowVerbal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nowVerbalCheckBox.Location = new System.Drawing.Point(129, 3);
+            this.nowVerbalCheckBox.Name = "nowVerbalCheckBox";
+            this.nowVerbalCheckBox.Size = new System.Drawing.Size(56, 17);
+            this.nowVerbalCheckBox.TabIndex = 2;
+            this.nowVerbalCheckBox.Text = "Verbal";
+            this.nowVerbalCheckBox.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel8
+            // pastDismissOptionFlowLayoutPanel
             // 
-            this.flowLayoutPanel8.AutoSize = true;
-            this.flowLayoutPanel8.Controls.Add(this.pastDismiss);
-            this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(146, 97);
-            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(312, 23);
-            this.flowLayoutPanel8.TabIndex = 10;
+            this.pastDismissOptionFlowLayoutPanel.AutoSize = true;
+            this.pastDismissOptionFlowLayoutPanel.Controls.Add(this.pastDismissCheckBox);
+            this.pastDismissOptionFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pastDismissOptionFlowLayoutPanel.Location = new System.Drawing.Point(146, 97);
+            this.pastDismissOptionFlowLayoutPanel.Name = "pastDismissOptionFlowLayoutPanel";
+            this.pastDismissOptionFlowLayoutPanel.Size = new System.Drawing.Size(312, 23);
+            this.pastDismissOptionFlowLayoutPanel.TabIndex = 10;
             // 
-            // pastDismiss
+            // pastDismissCheckBox
             // 
-            this.pastDismiss.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pastDismiss.AutoSize = true;
-            this.pastDismiss.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.PastDismiss;
-            this.pastDismiss.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "PastDismiss", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pastDismiss.Location = new System.Drawing.Point(3, 3);
-            this.pastDismiss.Name = "pastDismiss";
-            this.pastDismiss.Size = new System.Drawing.Size(61, 17);
-            this.pastDismiss.TabIndex = 0;
-            this.pastDismiss.Text = "Dismiss";
-            this.pastDismiss.UseVisualStyleBackColor = true;
+            this.pastDismissCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pastDismissCheckBox.AutoSize = true;
+            this.pastDismissCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.PastDismiss;
+            this.pastDismissCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "PastDismiss", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pastDismissCheckBox.Location = new System.Drawing.Point(3, 3);
+            this.pastDismissCheckBox.Name = "pastDismissCheckBox";
+            this.pastDismissCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.pastDismissCheckBox.TabIndex = 0;
+            this.pastDismissCheckBox.Text = "Dismiss";
+            this.pastDismissCheckBox.UseVisualStyleBackColor = true;
             // 
-            // soonColor
+            // SoonEventsColorButton
             // 
-            this.soonColor.AutoSize = true;
-            this.soonColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.soonColor.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonColor;
-            this.soonColor.ColorDialog = this.colorDialog1;
-            this.soonColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.soonColor.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.soonColor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.soonColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.soonColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.soonColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.soonColor.Location = new System.Drawing.Point(46, 34);
-            this.soonColor.Name = "soonColor";
-            this.soonColor.Size = new System.Drawing.Size(94, 25);
-            this.soonColor.TabIndex = 3;
-            this.soonColor.Text = "Color";
-            this.soonColor.UseVisualStyleBackColor = false;
+            this.SoonEventsColorButton.AutoSize = true;
+            this.SoonEventsColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.SoonEventsColorButton.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoonColor;
+            this.SoonEventsColorButton.ColorDialog = this.soonColorDialog;
+            this.SoonEventsColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SoonEventsColorButton.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoonColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.SoonEventsColorButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SoonEventsColorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.SoonEventsColorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.SoonEventsColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SoonEventsColorButton.Location = new System.Drawing.Point(46, 34);
+            this.SoonEventsColorButton.Name = "SoonEventsColorButton";
+            this.SoonEventsColorButton.Size = new System.Drawing.Size(94, 25);
+            this.SoonEventsColorButton.TabIndex = 3;
+            this.SoonEventsColorButton.Text = "Color";
+            this.SoonEventsColorButton.UseVisualStyleBackColor = false;
             // 
-            // nowColor
+            // nowEventsColorButton
             // 
-            this.nowColor.AutoSize = true;
-            this.nowColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.nowColor.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowColor;
-            this.nowColor.ColorDialog = this.colorDialog1;
-            this.nowColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nowColor.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nowColor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.nowColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.nowColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.nowColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nowColor.Location = new System.Drawing.Point(46, 66);
-            this.nowColor.Name = "nowColor";
-            this.nowColor.Size = new System.Drawing.Size(94, 25);
-            this.nowColor.TabIndex = 6;
-            this.nowColor.Text = "Color";
-            this.nowColor.UseVisualStyleBackColor = false;
+            this.nowEventsColorButton.AutoSize = true;
+            this.nowEventsColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.nowEventsColorButton.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.NowColor;
+            this.nowEventsColorButton.ColorDialog = this.soonColorDialog;
+            this.nowEventsColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nowEventsColorButton.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "NowColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nowEventsColorButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.nowEventsColorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.nowEventsColorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.nowEventsColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nowEventsColorButton.Location = new System.Drawing.Point(46, 66);
+            this.nowEventsColorButton.Name = "nowEventsColorButton";
+            this.nowEventsColorButton.Size = new System.Drawing.Size(94, 25);
+            this.nowEventsColorButton.TabIndex = 6;
+            this.nowEventsColorButton.Text = "Color";
+            this.nowEventsColorButton.UseVisualStyleBackColor = false;
             // 
-            // pastColor
+            // pastEventsColorButton
             // 
-            this.pastColor.AutoSize = true;
-            this.pastColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.pastColor.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.PastColor;
-            this.pastColor.ColorDialog = this.colorDialog1;
-            this.pastColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pastColor.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "PastColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pastColor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pastColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.pastColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.pastColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pastColor.Location = new System.Drawing.Point(46, 97);
-            this.pastColor.Name = "pastColor";
-            this.pastColor.Size = new System.Drawing.Size(94, 25);
-            this.pastColor.TabIndex = 9;
-            this.pastColor.Text = "Color";
-            this.pastColor.UseVisualStyleBackColor = false;
+            this.pastEventsColorButton.AutoSize = true;
+            this.pastEventsColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.pastEventsColorButton.Color = global::ReflectiveCode.GMinder.Properties.Settings.Default.PastColor;
+            this.pastEventsColorButton.ColorDialog = this.soonColorDialog;
+            this.pastEventsColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pastEventsColorButton.DataBindings.Add(new System.Windows.Forms.Binding("Color", global::ReflectiveCode.GMinder.Properties.Settings.Default, "PastColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pastEventsColorButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pastEventsColorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.pastEventsColorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.pastEventsColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pastEventsColorButton.Location = new System.Drawing.Point(46, 97);
+            this.pastEventsColorButton.Name = "pastEventsColorButton";
+            this.pastEventsColorButton.Size = new System.Drawing.Size(94, 25);
+            this.pastEventsColorButton.TabIndex = 9;
+            this.pastEventsColorButton.Text = "Color";
+            this.pastEventsColorButton.UseVisualStyleBackColor = false;
             // 
-            // groupBox3
+            // soundSettingsGroupBox
             // 
-            this.groupBox3.AutoSize = true;
-            this.groupBox3.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Location = new System.Drawing.Point(3, 292);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(467, 48);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sound";
+            this.soundSettingsGroupBox.AutoSize = true;
+            this.soundSettingsGroupBox.Controls.Add(this.soundSettingsTableLayoutPanel);
+            this.soundSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.soundSettingsGroupBox.Location = new System.Drawing.Point(3, 292);
+            this.soundSettingsGroupBox.Name = "soundSettingsGroupBox";
+            this.soundSettingsGroupBox.Size = new System.Drawing.Size(467, 48);
+            this.soundSettingsGroupBox.TabIndex = 2;
+            this.soundSettingsGroupBox.TabStop = false;
+            this.soundSettingsGroupBox.Text = "Sound";
             // 
-            // tableLayoutPanel2
+            // soundSettingsTableLayoutPanel
             // 
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.soundPlay, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.soundBrowse, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.soundPath, 2, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(461, 29);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.soundSettingsTableLayoutPanel.AutoSize = true;
+            this.soundSettingsTableLayoutPanel.ColumnCount = 3;
+            this.soundSettingsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.soundSettingsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.soundSettingsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.soundSettingsTableLayoutPanel.Controls.Add(this.soundPlayButton, 0, 1);
+            this.soundSettingsTableLayoutPanel.Controls.Add(this.soundBrowseButton, 1, 1);
+            this.soundSettingsTableLayoutPanel.Controls.Add(this.soundPathTextBox, 2, 1);
+            this.soundSettingsTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.soundSettingsTableLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.soundSettingsTableLayoutPanel.Name = "soundSettingsTableLayoutPanel";
+            this.soundSettingsTableLayoutPanel.RowCount = 2;
+            this.soundSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.soundSettingsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.soundSettingsTableLayoutPanel.Size = new System.Drawing.Size(461, 29);
+            this.soundSettingsTableLayoutPanel.TabIndex = 0;
             // 
-            // soundBrowse
+            // soundPlayButton
             // 
-            this.soundBrowse.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.soundBrowse.AutoSize = true;
-            this.soundBrowse.FileName = "First Run";
-            this.soundBrowse.Location = new System.Drawing.Point(84, 3);
-            this.soundBrowse.Name = "soundBrowse";
-            this.soundBrowse.OpenFileDialog = this.openFileDialog1;
-            this.soundBrowse.Size = new System.Drawing.Size(75, 23);
-            this.soundBrowse.TabIndex = 1;
-            this.soundBrowse.Text = "Browse";
-            this.soundBrowse.TextBox = this.soundPath;
-            this.soundBrowse.UseVisualStyleBackColor = true;
+            this.soundPlayButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.soundPlayButton.AutoSize = true;
+            this.soundPlayButton.Location = new System.Drawing.Point(3, 3);
+            this.soundPlayButton.Name = "soundPlayButton";
+            this.soundPlayButton.Size = new System.Drawing.Size(75, 23);
+            this.soundPlayButton.TabIndex = 0;
+            this.soundPlayButton.Text = "Play";
+            this.soundPlayButton.UseVisualStyleBackColor = true;
+            this.soundPlayButton.Click += new System.EventHandler(this.soundPlay_Click);
             // 
-            // openFileDialog1
+            // soundBrowseButton
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Wave|*.wav|All files|*.*";
-            this.openFileDialog1.Title = "Sound File";
+            this.soundBrowseButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.soundBrowseButton.AutoSize = true;
+            this.soundBrowseButton.FileName = "First Run";
+            this.soundBrowseButton.Location = new System.Drawing.Point(84, 3);
+            this.soundBrowseButton.Name = "soundBrowseButton";
+            this.soundBrowseButton.OpenFileDialog = this.openSoundFileDialog;
+            this.soundBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.soundBrowseButton.TabIndex = 1;
+            this.soundBrowseButton.Text = "Browse";
+            this.soundBrowseButton.TextBox = this.soundPathTextBox;
+            this.soundBrowseButton.UseVisualStyleBackColor = true;
             // 
-            // soundPath
+            // openSoundFileDialog
             // 
-            this.soundPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.soundPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoundPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.soundPath.Location = new System.Drawing.Point(165, 4);
-            this.soundPath.Name = "soundPath";
-            this.soundPath.Size = new System.Drawing.Size(293, 20);
-            this.soundPath.TabIndex = 2;
-            this.soundPath.Text = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoundPath;
+            this.openSoundFileDialog.FileName = "openSoundFileDialog";
+            this.openSoundFileDialog.Filter = "Wave|*.wav|All files|*.*";
+            this.openSoundFileDialog.Title = "Sound File";
             // 
-            // soundPlay
+            // soundPathTextBox
             // 
-            this.soundPlay.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.soundPlay.AutoSize = true;
-            this.soundPlay.Location = new System.Drawing.Point(3, 3);
-            this.soundPlay.Name = "soundPlay";
-            this.soundPlay.Size = new System.Drawing.Size(75, 23);
-            this.soundPlay.TabIndex = 0;
-            this.soundPlay.Text = "Play";
-            this.soundPlay.UseVisualStyleBackColor = true;
-            this.soundPlay.Click += new System.EventHandler(this.soundPlay_Click);
+            this.soundPathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.soundPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ReflectiveCode.GMinder.Properties.Settings.Default, "SoundPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.soundPathTextBox.Location = new System.Drawing.Point(165, 4);
+            this.soundPathTextBox.Name = "soundPathTextBox";
+            this.soundPathTextBox.Size = new System.Drawing.Size(293, 20);
+            this.soundPathTextBox.TabIndex = 2;
+            this.soundPathTextBox.Text = global::ReflectiveCode.GMinder.Properties.Settings.Default.SoundPath;
             // 
-            // groupBox5
+            // agendaSettingsGroupBox
             // 
-            this.groupBox5.AutoSize = true;
-            this.groupBox5.Controls.Add(this.flowLayoutPanel3);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox5.Location = new System.Drawing.Point(3, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(467, 117);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Agenda";
+            this.agendaSettingsGroupBox.AutoSize = true;
+            this.agendaSettingsGroupBox.Controls.Add(this.agendaSettingsFlowLayoutPanel);
+            this.agendaSettingsGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.agendaSettingsGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.agendaSettingsGroupBox.Name = "agendaSettingsGroupBox";
+            this.agendaSettingsGroupBox.Size = new System.Drawing.Size(467, 117);
+            this.agendaSettingsGroupBox.TabIndex = 0;
+            this.agendaSettingsGroupBox.TabStop = false;
+            this.agendaSettingsGroupBox.Text = "Agenda";
             // 
-            // flowLayoutPanel3
+            // agendaSettingsFlowLayoutPanel
             // 
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.Controls.Add(this.refreshRate);
-            this.flowLayoutPanel3.Controls.Add(this.label1);
-            this.flowLayoutPanel3.Controls.Add(this.preload);
-            this.flowLayoutPanel3.Controls.Add(this.label3);
-            this.flowLayoutPanel3.Controls.Add(this.doPing);
-            this.flowLayoutPanel3.Controls.Add(this.onTop);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(461, 98);
-            this.flowLayoutPanel3.TabIndex = 0;
+            this.agendaSettingsFlowLayoutPanel.AutoSize = true;
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.refreshRateInteger);
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.refreshRateLabel);
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.preloadDaysInteger);
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.PreloadDaysLabel);
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.doPingCheckBox);
+            this.agendaSettingsFlowLayoutPanel.Controls.Add(this.onTopCheckBox);
+            this.agendaSettingsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.agendaSettingsFlowLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.agendaSettingsFlowLayoutPanel.Name = "agendaSettingsFlowLayoutPanel";
+            this.agendaSettingsFlowLayoutPanel.Size = new System.Drawing.Size(461, 98);
+            this.agendaSettingsFlowLayoutPanel.TabIndex = 0;
             // 
-            // refreshRate
+            // refreshRateInteger
             // 
-            this.refreshRate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.refreshRate.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::ReflectiveCode.GMinder.Properties.Settings.Default, "RefreshRate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.refreshRate.Location = new System.Drawing.Point(3, 3);
-            this.refreshRate.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.refreshRate.Maximum = new decimal(new int[] {
+            this.refreshRateInteger.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.refreshRateInteger.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::ReflectiveCode.GMinder.Properties.Settings.Default, "RefreshRate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.refreshRateInteger.Location = new System.Drawing.Point(3, 3);
+            this.refreshRateInteger.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.refreshRateInteger.Maximum = new decimal(new int[] {
             1440,
             0,
             0,
             0});
-            this.refreshRate.Name = "refreshRate";
-            this.refreshRate.Size = new System.Drawing.Size(67, 20);
-            this.refreshRate.TabIndex = 0;
-            this.refreshRate.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.RefreshRate;
+            this.refreshRateInteger.Name = "refreshRateInteger";
+            this.refreshRateInteger.Size = new System.Drawing.Size(67, 20);
+            this.refreshRateInteger.TabIndex = 0;
+            this.refreshRateInteger.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.RefreshRate;
             // 
-            // preload
+            // preloadDaysInteger
             // 
-            this.preload.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.preload.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::ReflectiveCode.GMinder.Properties.Settings.Default, "LoadDays", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.preload.Location = new System.Drawing.Point(3, 29);
-            this.preload.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.preload.Maximum = new decimal(new int[] {
+            this.preloadDaysInteger.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.preloadDaysInteger.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::ReflectiveCode.GMinder.Properties.Settings.Default, "LoadDays", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.preloadDaysInteger.Location = new System.Drawing.Point(3, 29);
+            this.preloadDaysInteger.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.preloadDaysInteger.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.preload.Name = "preload";
-            this.preload.Size = new System.Drawing.Size(67, 20);
-            this.preload.TabIndex = 2;
-            this.preload.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.LoadDays;
+            this.preloadDaysInteger.Name = "preloadDaysInteger";
+            this.preloadDaysInteger.Size = new System.Drawing.Size(67, 20);
+            this.preloadDaysInteger.TabIndex = 2;
+            this.preloadDaysInteger.Value = global::ReflectiveCode.GMinder.Properties.Settings.Default.LoadDays;
             // 
-            // doPing
+            // doPingCheckBox
             // 
-            this.doPing.AutoSize = true;
-            this.doPing.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.DoPing;
-            this.doPing.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.doPing.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "DoPing", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.flowLayoutPanel3.SetFlowBreak(this.doPing, true);
-            this.doPing.Location = new System.Drawing.Point(3, 55);
-            this.doPing.Name = "doPing";
-            this.doPing.Size = new System.Drawing.Size(423, 17);
-            this.doPing.TabIndex = 5;
-            this.doPing.Text = "Test connectivity before downloading events (disable if your events won\'t downloa" +
-                "d)";
-            this.doPing.UseVisualStyleBackColor = true;
+            this.doPingCheckBox.AutoSize = true;
+            this.doPingCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.DoPing;
+            this.doPingCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.doPingCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "DoPing", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.agendaSettingsFlowLayoutPanel.SetFlowBreak(this.doPingCheckBox, true);
+            this.doPingCheckBox.Location = new System.Drawing.Point(3, 55);
+            this.doPingCheckBox.Name = "doPingCheckBox";
+            this.doPingCheckBox.Size = new System.Drawing.Size(423, 17);
+            this.doPingCheckBox.TabIndex = 5;
+            this.doPingCheckBox.Text = "Test connectivity before downloading events (disable if your events won\'t downloa" +
+    "d)";
+            this.doPingCheckBox.UseVisualStyleBackColor = true;
             // 
-            // onTop
+            // onTopCheckBox
             // 
-            this.onTop.AutoSize = true;
-            this.onTop.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.OnTop;
-            this.onTop.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.onTop.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "OnTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.onTop.Location = new System.Drawing.Point(3, 78);
-            this.onTop.Name = "onTop";
-            this.onTop.Size = new System.Drawing.Size(92, 17);
-            this.onTop.TabIndex = 4;
-            this.onTop.Text = "Always on top";
-            this.onTop.UseVisualStyleBackColor = true;
+            this.onTopCheckBox.AutoSize = true;
+            this.onTopCheckBox.Checked = global::ReflectiveCode.GMinder.Properties.Settings.Default.OnTop;
+            this.onTopCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.onTopCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ReflectiveCode.GMinder.Properties.Settings.Default, "OnTop", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.onTopCheckBox.Location = new System.Drawing.Point(3, 78);
+            this.onTopCheckBox.Name = "onTopCheckBox";
+            this.onTopCheckBox.Size = new System.Drawing.Size(92, 17);
+            this.onTopCheckBox.TabIndex = 4;
+            this.onTopCheckBox.Text = "Always on top";
+            this.onTopCheckBox.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel4
+            // optionsTableLayoutPanel
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.groupBox5, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.groupBox3, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel7, 0, 3);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 5;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(473, 388);
-            this.tableLayoutPanel4.TabIndex = 0;
+            this.optionsTableLayoutPanel.ColumnCount = 1;
+            this.optionsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.optionsTableLayoutPanel.Controls.Add(this.agendaSettingsGroupBox, 0, 0);
+            this.optionsTableLayoutPanel.Controls.Add(this.eventsSettingsGroupBox, 0, 1);
+            this.optionsTableLayoutPanel.Controls.Add(this.soundSettingsGroupBox, 0, 2);
+            this.optionsTableLayoutPanel.Controls.Add(this.okCancelFlowLayoutPanel, 0, 3);
+            this.optionsTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.optionsTableLayoutPanel.Name = "optionsTableLayoutPanel";
+            this.optionsTableLayoutPanel.RowCount = 5;
+            this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.optionsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.optionsTableLayoutPanel.Size = new System.Drawing.Size(473, 388);
+            this.optionsTableLayoutPanel.TabIndex = 0;
             // 
-            // flowLayoutPanel7
+            // okCancelFlowLayoutPanel
             // 
-            this.flowLayoutPanel7.AutoSize = true;
-            this.flowLayoutPanel7.Controls.Add(this.buttonCancel);
-            this.flowLayoutPanel7.Controls.Add(this.buttonOk);
-            this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 347);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(467, 29);
-            this.flowLayoutPanel7.TabIndex = 3;
+            this.okCancelFlowLayoutPanel.AutoSize = true;
+            this.okCancelFlowLayoutPanel.Controls.Add(this.buttonCancel);
+            this.okCancelFlowLayoutPanel.Controls.Add(this.buttonOk);
+            this.okCancelFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.okCancelFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.okCancelFlowLayoutPanel.Location = new System.Drawing.Point(3, 348);
+            this.okCancelFlowLayoutPanel.Name = "okCancelFlowLayoutPanel";
+            this.okCancelFlowLayoutPanel.Size = new System.Drawing.Size(467, 29);
+            this.okCancelFlowLayoutPanel.TabIndex = 3;
             // 
             // buttonCancel
             // 
@@ -647,84 +647,84 @@ namespace ReflectiveCode.GMinder
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(473, 388);
-            this.Controls.Add(this.tableLayoutPanel4);
+            this.Controls.Add(this.optionsTableLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Options";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Options";
-            this.Shown += new System.EventHandler(this.Options_Shown);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Options_FormClosed);
-            this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.soonTime)).EndInit();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel8.ResumeLayout(false);
-            this.flowLayoutPanel8.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.refreshRate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preload)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel7.ResumeLayout(false);
+            this.Shown += new System.EventHandler(this.Options_Shown);
+            this.eventsSettingsGroupBox.ResumeLayout(false);
+            this.eventSettingsTableLayoutPanel.ResumeLayout(false);
+            this.eventSettingsTableLayoutPanel.PerformLayout();
+            this.SoonAlertOptionsFlowLayoutPanel.ResumeLayout(false);
+            this.SoonAlertOptionsFlowLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.soonTimeInteger)).EndInit();
+            this.NowAlertOptionsFlowLayoutPanel.ResumeLayout(false);
+            this.NowAlertOptionsFlowLayoutPanel.PerformLayout();
+            this.pastDismissOptionFlowLayoutPanel.ResumeLayout(false);
+            this.pastDismissOptionFlowLayoutPanel.PerformLayout();
+            this.soundSettingsGroupBox.ResumeLayout(false);
+            this.soundSettingsGroupBox.PerformLayout();
+            this.soundSettingsTableLayoutPanel.ResumeLayout(false);
+            this.soundSettingsTableLayoutPanel.PerformLayout();
+            this.agendaSettingsGroupBox.ResumeLayout(false);
+            this.agendaSettingsGroupBox.PerformLayout();
+            this.agendaSettingsFlowLayoutPanel.ResumeLayout(false);
+            this.agendaSettingsFlowLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshRateInteger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preloadDaysInteger)).EndInit();
+            this.optionsTableLayoutPanel.ResumeLayout(false);
+            this.optionsTableLayoutPanel.PerformLayout();
+            this.okCancelFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label refreshRateLabel;
         private System.Windows.Forms.Button buttonOk;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox soundPath;
-        private System.Windows.Forms.Button soundPlay;
-        private Controls.OpenFileButton soundBrowse;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private Controls.IntegerUpDown refreshRate;
-        private Controls.IntegerUpDown preload;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.Label PreloadDaysLabel;
+        private System.Windows.Forms.GroupBox eventsSettingsGroupBox;
+        private System.Windows.Forms.GroupBox soundSettingsGroupBox;
+        private System.Windows.Forms.TextBox soundPathTextBox;
+        private System.Windows.Forms.Button soundPlayButton;
+        private ReflectiveCode.GMinder.Controls.OpenFileButton soundBrowseButton;
+        private System.Windows.Forms.ColorDialog soonColorDialog;
+        private System.Windows.Forms.OpenFileDialog openSoundFileDialog;
+        private ReflectiveCode.GMinder.Controls.IntegerUpDown refreshRateInteger;
+        private ReflectiveCode.GMinder.Controls.IntegerUpDown preloadDaysInteger;
+        private System.Windows.Forms.TableLayoutPanel soundSettingsTableLayoutPanel;
+        private System.Windows.Forms.GroupBox agendaSettingsGroupBox;
+        private System.Windows.Forms.FlowLayoutPanel agendaSettingsFlowLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel optionsTableLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel okCancelFlowLayoutPanel;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.CheckBox soonPopup;
-        private System.Windows.Forms.CheckBox soonSound;
-        private Controls.IntegerUpDown soonTime;
-        private System.Windows.Forms.Label label2;
-        private Controls.ColorButton futureColor;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.CheckBox nowPopup;
-        private System.Windows.Forms.CheckBox nowSound;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.CheckBox pastDismiss;
-        private Controls.ColorButton soonColor;
-        private Controls.ColorButton nowColor;
-        private Controls.ColorButton pastColor;
-        private System.Windows.Forms.CheckBox onTop;
-        private System.Windows.Forms.CheckBox doPing;
-        private System.Windows.Forms.CheckBox soonVerbal;
-        private System.Windows.Forms.CheckBox nowVerbal;
+        private System.Windows.Forms.TableLayoutPanel eventSettingsTableLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel SoonAlertOptionsFlowLayoutPanel;
+        private System.Windows.Forms.CheckBox soonPopupCheckBox;
+        private System.Windows.Forms.CheckBox soonSoundCheckBox;
+        private ReflectiveCode.GMinder.Controls.IntegerUpDown soonTimeInteger;
+        private System.Windows.Forms.Label soonMinutesLabel;
+        private ReflectiveCode.GMinder.Controls.ColorButton futureEventsColorButton;
+        private System.Windows.Forms.Label FutureEventsLabel;
+        private System.Windows.Forms.Label SoonEventsLabel;
+        private System.Windows.Forms.Label NowEventsLabel;
+        private System.Windows.Forms.Label PastEventsLabel;
+        private System.Windows.Forms.FlowLayoutPanel NowAlertOptionsFlowLayoutPanel;
+        private System.Windows.Forms.CheckBox nowPopupCheckBox;
+        private System.Windows.Forms.CheckBox nowSoundCheckBox;
+        private System.Windows.Forms.FlowLayoutPanel pastDismissOptionFlowLayoutPanel;
+        private System.Windows.Forms.CheckBox pastDismissCheckBox;
+        private ReflectiveCode.GMinder.Controls.ColorButton SoonEventsColorButton;
+        private ReflectiveCode.GMinder.Controls.ColorButton nowEventsColorButton;
+        private ReflectiveCode.GMinder.Controls.ColorButton pastEventsColorButton;
+        private System.Windows.Forms.CheckBox onTopCheckBox;
+        private System.Windows.Forms.CheckBox doPingCheckBox;
+        private System.Windows.Forms.CheckBox soonVerbalCheckBox;
+        private System.Windows.Forms.CheckBox nowVerbalCheckBox;
     }
 }

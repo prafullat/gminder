@@ -63,7 +63,7 @@ namespace ReflectiveCode.GMinder
             {
                 _Selected = value;
                 DisplayEventDetails(value);
-                buttonDismiss.Enabled = buttonOpen.Enabled = (_Selected != null);
+                dismissButton.Enabled = openButton.Enabled = (_Selected != null);
             }
         }
 
@@ -326,7 +326,7 @@ namespace ReflectiveCode.GMinder
 
         private void DisplayEventDetails(Gvent gvent)
         {
-            eventTable.SuspendLayout();
+            reminderFormTableLayoutPanel.SuspendLayout();
 
             if (gvent != null)
             {
@@ -368,7 +368,7 @@ namespace ReflectiveCode.GMinder
                 eventWhere.Text = null;
             }
 
-            eventTable.ResumeLayout();
+            reminderFormTableLayoutPanel.ResumeLayout();
         }
 
         #endregion
@@ -394,7 +394,7 @@ namespace ReflectiveCode.GMinder
 
         private void HandleSnoozeButton(object sender, EventArgs e)
         {
-            snoozeTimer.Interval = integerSnooze.Value * ONE_MINUTE;
+            snoozeTimer.Interval = snoozeLengthInteger.Value * ONE_MINUTE;
             snoozeTimer.Start();
             Hidden = true;
         }

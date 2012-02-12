@@ -32,15 +32,15 @@ namespace ReflectiveCode.GMinder
         public Account()
         {
             InitializeComponent();
-            tbUsername.Text = Properties.Login.Default.Username;
+            usernameTextBox.Text = Properties.Login.Default.Username;
         }
 
         private void HandleOK(object sender, EventArgs e)
         {
-            string user = tbUsername.Text;
-            string pass = tbPassword.Text;
+            string user = usernameTextBox.Text;
+            string pass = passwordTextBox.Text;
 
-            tbPassword.Text = null;
+            passwordTextBox.Text = null;
 
             if (Calendar.SetUserCredentials(user, pass))
             {
