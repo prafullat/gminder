@@ -14,7 +14,7 @@ namespace ReflectiveCode.GMinder
             this.productNameLabel.Text = AssemblyProduct;
             this.versionLabel.Text = String.Format("Version {0}", AssemblyVersion);
             this.copyrightLabel.Text = AssemblyCopyright;
-            this.companyNameLabel.Text = AssemblyCompany;
+            this.companyNameLabel.Text = "https://code.google.com/p/gminder/";
             this.descriptionTextBox.Text = AssemblyDescription;
         }
 
@@ -102,7 +102,7 @@ namespace ReflectiveCode.GMinder
         {
             try
             {
-                Process.Start("http://reflectivecode.com");
+                Process.Start("https://code.google.com/p/gminder/");
             }
             catch { }
         }
