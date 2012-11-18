@@ -28,6 +28,7 @@ namespace ReflectiveCode.GMinder
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendars));
             this.CalendarsFormTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.loginGroupBox = new System.Windows.Forms.GroupBox();
@@ -35,6 +36,7 @@ namespace ReflectiveCode.GMinder
             this.usernameLabel = new System.Windows.Forms.Label();
             this.loginUsernameLabel = new System.Windows.Forms.Label();
             this.loginSetButton = new System.Windows.Forms.Button();
+            this.loginResetButton = new System.Windows.Forms.Button();
             this.calendarsGroupBox = new System.Windows.Forms.GroupBox();
             this.calendardsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.calendarNameLabel = new System.Windows.Forms.Label();
@@ -48,10 +50,11 @@ namespace ReflectiveCode.GMinder
             this.calendarUrlTextBox = new System.Windows.Forms.TextBox();
             this.calendarList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.calendarColorBox = new ReflectiveCode.GMinder.Controls.ColorButton();
             this.okCancelFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
+            this.calenderTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.calendarColorBox = new ReflectiveCode.GMinder.Controls.ColorButton();
             this.CalendarsFormTableLayoutPanel.SuspendLayout();
             this.loginGroupBox.SuspendLayout();
             this.loginSettingsFlowLayoutPanel.SuspendLayout();
@@ -96,6 +99,7 @@ namespace ReflectiveCode.GMinder
             this.loginSettingsFlowLayoutPanel.Controls.Add(this.usernameLabel);
             this.loginSettingsFlowLayoutPanel.Controls.Add(this.loginUsernameLabel);
             this.loginSettingsFlowLayoutPanel.Controls.Add(this.loginSetButton);
+            this.loginSettingsFlowLayoutPanel.Controls.Add(this.loginResetButton);
             this.loginSettingsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.loginSettingsFlowLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.loginSettingsFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -131,6 +135,17 @@ namespace ReflectiveCode.GMinder
             this.loginSetButton.Text = "Set";
             this.loginSetButton.UseVisualStyleBackColor = true;
             this.loginSetButton.Click += new System.EventHandler(this.loginSet_Click);
+            // 
+            // loginResetButton
+            // 
+            this.loginResetButton.Location = new System.Drawing.Point(84, 16);
+            this.loginResetButton.Name = "loginResetButton";
+            this.loginResetButton.Size = new System.Drawing.Size(75, 23);
+            this.loginResetButton.TabIndex = 3;
+            this.loginResetButton.Text = "Reset";
+            this.calenderTooltip.SetToolTip(this.loginResetButton, "Forgets your current login information. Note that this is not \'Sign-Out\'.");
+            this.loginResetButton.UseVisualStyleBackColor = true;
+            this.loginResetButton.Click += new System.EventHandler(this.loginResetButton_Click);
             // 
             // calendarsGroupBox
             // 
@@ -288,23 +303,6 @@ namespace ReflectiveCode.GMinder
             this.columnHeader1.Text = "Calendar";
             this.columnHeader1.Width = 145;
             // 
-            // calendarColorBox
-            // 
-            this.calendarColorBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calendarColorBox.BackColor = System.Drawing.Color.Black;
-            this.calendarColorBox.Color = System.Drawing.Color.Black;
-            this.calendarColorBox.ColorDialog = null;
-            this.calendarColorBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.calendarColorBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.calendarColorBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calendarColorBox.Location = new System.Drawing.Point(44, 172);
-            this.calendarColorBox.Name = "calendarColorBox";
-            this.calendarColorBox.Size = new System.Drawing.Size(396, 23);
-            this.calendarColorBox.TabIndex = 6;
-            this.calendarColorBox.UseVisualStyleBackColor = false;
-            this.calendarColorBox.Click += new System.EventHandler(this.calendarColor_Click);
-            // 
             // okCancelFlowLayoutPanel
             // 
             this.okCancelFlowLayoutPanel.AutoSize = true;
@@ -338,6 +336,23 @@ namespace ReflectiveCode.GMinder
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.buttonOk_Click);
+            // 
+            // calendarColorBox
+            // 
+            this.calendarColorBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calendarColorBox.BackColor = System.Drawing.Color.Black;
+            this.calendarColorBox.Color = System.Drawing.Color.Black;
+            this.calendarColorBox.ColorDialog = null;
+            this.calendarColorBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.calendarColorBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.calendarColorBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calendarColorBox.Location = new System.Drawing.Point(44, 172);
+            this.calendarColorBox.Name = "calendarColorBox";
+            this.calendarColorBox.Size = new System.Drawing.Size(396, 23);
+            this.calendarColorBox.TabIndex = 6;
+            this.calendarColorBox.UseVisualStyleBackColor = false;
+            this.calendarColorBox.Click += new System.EventHandler(this.calendarColor_Click);
             // 
             // Calendars
             // 
@@ -393,5 +408,7 @@ namespace ReflectiveCode.GMinder
         private System.Windows.Forms.ListView calendarList;
         private Controls.ColorButton calendarColorBox;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Button loginResetButton;
+        private System.Windows.Forms.ToolTip calenderTooltip;
     }
 }

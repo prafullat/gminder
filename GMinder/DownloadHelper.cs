@@ -63,5 +63,12 @@ namespace ReflectiveCode.GMinder
                     yield return _Queue.Dequeue();
             }
         }
+
+        public void ForgetAuthentication()
+        {
+            _Service.SetAuthenticationToken("invalid_token");
+            _Service.setUserCredentials("invalid_username", "invalid_password");
+        }
+
     }
 }

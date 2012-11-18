@@ -27,6 +27,9 @@ using System.Windows.Forms;
 
 namespace ReflectiveCode.GMinder
 {
+    /// <summary>
+    ///  Implementation for small preview window that is shown when we click on tray button.
+    /// </summary>
     public partial class Preview : Form
     {
         public Preview()

@@ -47,7 +47,7 @@ namespace ReflectiveCode.GMinder
         public static bool SetUserCredentials(string username, string password)
         {
             _Service.setUserCredentials(username, password);
-
+            
             var proxy = WebRequest.GetSystemWebProxy();
             proxy.Credentials = CredentialCache.DefaultCredentials;
             (_Service.RequestFactory as GDataRequestFactory).Proxy = proxy;
@@ -253,6 +253,12 @@ namespace ReflectiveCode.GMinder
             }
         }
 
+        public void ForgetAuthentication()
+        {
+              _Fetcher.ForgetAuthentication();
+        }
+
+
         public void ProcessUpdates()
         {
             if (Enabled)
@@ -313,6 +319,7 @@ namespace ReflectiveCode.GMinder
             return Name;
         }
 
+ 
 
         #region Enumerator
 

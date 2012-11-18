@@ -96,6 +96,21 @@ namespace ReflectiveCode.GMinder
             loginUsernameLabel.Text = Properties.Login.Default.Username;
         }
 
+        private void loginResetButton_Click(object sender, EventArgs e)
+        {
+            Properties.Login.Default.Username = "";
+            Properties.Login.Default.Password = "";
+            Properties.Login.Default.Save();
+            loginUsernameLabel.Text = "";
+
+            foreach(Calendar calender in calendars)
+            {
+                calender.ForgetAuthentication();
+            }
+
+            RemoveAllItems();
+        }
+
         #endregion
 
 
@@ -253,6 +268,18 @@ namespace ReflectiveCode.GMinder
             }
         }
 
+        private void RemoveAllItems()
+        {
+            while (calendarList.Items.Count != 0)
+            {
+                ListViewItem item = calendarList.Items[0];
+                
+                // This method modifies Items.count
+                RemoveItem(item);
+            }
+                       
+        }
+
 
         #region Events
 
@@ -327,6 +354,7 @@ namespace ReflectiveCode.GMinder
 
         #endregion
 
+      
 
         #endregion
 
