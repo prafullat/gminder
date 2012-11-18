@@ -45,6 +45,24 @@ namespace ReflectiveCode.GMinder.Controls
         }
 
         /// <summary>
+        /// Remove all event handlers while disposing, Otherwise when this methods get called,
+        /// we may try to modify (add or append) entries to disposed controls leading to some 
+        /// runtime exception
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected override void Dispose(bool disposing)
+        {
+            Schedule.Current.Redrawing -= (sender, e) => Reset();
+            Schedule.Current.BeginningUpdate -= (sender, e) => SafeBeginUpdate();
+            Schedule.Current.EndingUpdate -= (sender, e) => SafeEndUpdate();
+            Schedule.Current.GventAdded -= (sender, e) => Add(e.Gvent);
+            Schedule.Current.GventRemoved -= (sender, e) => Remove(e.Gvent);
+            Schedule.Current.GventChanged -= (sender, e) => UpdateGvent(e.Gvent, e.Changes);
+
+            base.Dispose(disposing);
+        }
+
+        /// <summary>
         /// Add a new gvent to the agenda list
         /// </summary>
         /// <param name="gvent">gvent to add</param>
@@ -79,6 +97,18 @@ namespace ReflectiveCode.GMinder.Controls
 
             // Add the item into the list
             item.Group = header.Group;
+            AddItemToItems(item);
+        }
+
+        delegate void AddItemToItemsInvoker(ListViewItem item);
+
+        private void AddItemToItems(ListViewItem item)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new AddItemToItemsInvoker(AddItemToItems), item);
+                return;
+            }
             Items.Add(item);
         }
 
@@ -106,10 +136,22 @@ namespace ReflectiveCode.GMinder.Controls
                 header.Group = GetGroup(time);
 
                 // Add header to list
-                Items.Add(header);
+                AddHeaderToItems(header);
             }
 
             return header;
+        }
+
+        delegate void AddHeaderToItemsInvoker(ListViewItem header);
+
+        void AddHeaderToItems(ListViewItem header)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new AddHeaderToItemsInvoker(AddHeaderToItems), header);
+                return;
+            }
+            Items.Add(header);
         }
 
         private ListViewGroup GetGroup(DateTime time)
@@ -141,10 +183,25 @@ namespace ReflectiveCode.GMinder.Controls
                         break;
                     index++;
                 }
-                Groups.Insert(index, group);
+                
+                AddGroupToGroups(index, group);
             }
 
             return group;
+        }
+
+        delegate void AddGroupToGroupsInvoker(int index, ListViewGroup group);
+
+        void AddGroupToGroups(int index, ListViewGroup group)
+        {
+            // We may be getting called from different thread, Use invoker to avoid assert.
+            // 
+            if (InvokeRequired)
+            {
+                Invoke(new AddGroupToGroupsInvoker(AddGroupToGroups), index, group);
+                return;
+            }
+            Groups.Insert(index, group);
         }
 
         private void Remove(ListViewItem item)
